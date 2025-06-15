@@ -1,0 +1,1322 @@
+{
+  "chart": {
+    "offset": {
+      "x": -475.06,
+      "y": 127.74
+    },
+    "scale": 0.552,
+    "nodes": {
+      "b8f006cc-cd2a-4b28-ae8e-3e94f044a2aa": {
+        "id": "b8f006cc-cd2a-4b28-ae8e-3e94f044a2aa",
+        "position": {
+          "x": 0,
+          "y": 658.7655601882815
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "raw_laz_files": {
+            "id": "raw_laz_files",
+            "type": "right",
+            "properties": {
+              "color": "#1f9331",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 207.5,
+              "y": 75
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/729aba13-c583-4c5e-8db2-c22459625565/",
+            "owner": "gpelouze",
+            "virtual_lab": "laserfarm",
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-build:v0.0.8",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-runtime:v0.0.8"
+            },
+            "dependencies": [
+              {
+                "name": "Minio",
+                "module": "minio",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "raw_laz_files",
+                "type": "list"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_local_path_raw",
+                "assignation": "conf_local_path_raw = os.path.join('/tmp/data', 'raw')"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_minio_endpoint",
+                "type": "str",
+                "default_value": "scruffy.lab.uvalight.net:9000"
+              },
+              {
+                "name": "param_minio_public_bucket",
+                "type": "str",
+                "default_value": "naa-vre-public"
+              },
+              {
+                "name": "param_minio_public_dataset_prefix",
+                "type": "str",
+                "default_value": "vl-laserfarm/small_terschelling/ahn3/"
+              }
+            ],
+            "secrets": [],
+            "title": "s1-fetch-laz-files-gpelouze",
+            "description": "s1-fetch-laz-files-gpelouze",
+            "created": "2025-06-14T15:10:43.850965Z",
+            "modified": "2025-06-14T15:10:44.042182Z",
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s1-fetch-laz-files-gpelouze:8a51418",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/ce23c5f3274540b44adfd793a551f768ce1b7e8e/s1-fetch-laz-files-gpelouze"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 152
+        }
+      },
+      "eb57a963-dfae-487a-b787-d8b8f620d425": {
+        "id": "eb57a963-dfae-487a-b787-d8b8f620d425",
+        "position": {
+          "x": 1466.0554734530642,
+          "y": 664.9902311950508
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "split_laz_files": {
+            "id": "split_laz_files",
+            "type": "left",
+            "properties": {
+              "color": "#8bd22d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 44,
+              "y": 75
+            }
+          },
+          "tiles": {
+            "id": "tiles",
+            "type": "right",
+            "properties": {
+              "color": "#82bf40",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 234.5,
+              "y": 75
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/517838eb-eae4-490c-9da8-6254a4dae9e4/",
+            "owner": "gpelouze",
+            "virtual_lab": "laserfarm",
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.0.8",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.0.8"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "json",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "Retiler",
+                "module": "laserfarm",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "split_laz_files",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "tiles",
+                "type": "list"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_local_path_split",
+                "assignation": "conf_local_path_split = os.path.join('/tmp/data', 'split')"
+              },
+              {
+                "name": "conf_local_path_retiled",
+                "assignation": "conf_local_path_retiled = os.path.join('/tmp/data', 'retiled')"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_max_x",
+                "type": "str",
+                "default_value": "398892.19"
+              },
+              {
+                "name": "param_max_y",
+                "type": "str",
+                "default_value": "726783.87"
+              },
+              {
+                "name": "param_min_x",
+                "type": "str",
+                "default_value": "-113107.81"
+              },
+              {
+                "name": "param_min_y",
+                "type": "str",
+                "default_value": "214783.87"
+              },
+              {
+                "name": "param_n_tiles_side",
+                "type": "str",
+                "default_value": "512"
+              }
+            ],
+            "secrets": [],
+            "title": "s3-retile-laz-files-gpelouze",
+            "description": "s3-retile-laz-files-gpelouze",
+            "created": "2025-06-14T15:12:55.881923Z",
+            "modified": "2025-06-14T15:12:56.093905Z",
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s3-retile-laz-files-gpelouze:75a378d",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/e7cde01b14a3e6f233b96ab74e9632e250797115/s3-retile-laz-files-gpelouze"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 152
+        }
+      },
+      "f7dc769b-7bb4-4e45-a643-faca46cd4ae7": {
+        "id": "f7dc769b-7bb4-4e45-a643-faca46cd4ae7",
+        "position": {
+          "x": 603.5564160980889,
+          "y": 661.129650137226
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "raw_laz_files": {
+            "id": "raw_laz_files",
+            "type": "left",
+            "properties": {
+              "color": "#1f9331",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 42.5,
+              "y": 75
+            }
+          },
+          "split_laz_files": {
+            "id": "split_laz_files",
+            "type": "right",
+            "properties": {
+              "color": "#8bd22d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 206,
+              "y": 75
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/325ae92b-359e-478f-9459-130d0d27d8ae/",
+            "owner": "gpelouze",
+            "virtual_lab": "laserfarm",
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.0.8",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.0.8"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "laspy",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "raw_laz_files",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "split_laz_files",
+                "type": "list"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_local_path_split",
+                "assignation": "conf_local_path_split = os.path.join('/tmp/data', 'split')"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_laz_compression_factor",
+                "type": "str",
+                "default_value": "7"
+              },
+              {
+                "name": "param_max_filesize_mb",
+                "type": "str",
+                "default_value": "80"
+              }
+            ],
+            "secrets": [],
+            "title": "s2-split-big-laz-gpelouze",
+            "description": "s2-split-big-laz-gpelouze",
+            "created": "2025-06-14T15:13:26.185089Z",
+            "modified": "2025-06-14T15:27:27.712528Z",
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s2-split-big-laz-gpelouze:a23a978",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/717a54a30ce3a7879c69892c6eaa0a32b221a92b/s2-split-big-laz-gpelouze"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 152
+        }
+      },
+      "3357a349-1b42-4200-ad93-d49fb94db0b5": {
+        "id": "3357a349-1b42-4200-ad93-d49fb94db0b5",
+        "position": {
+          "x": 2025.6707459207464,
+          "y": 666.303807303807
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "tiles": {
+            "id": "tiles",
+            "type": "left",
+            "properties": {
+              "color": "#82bf40",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 15.5,
+              "y": 75
+            }
+          },
+          "unique_tiles": {
+            "id": "unique_tiles",
+            "type": "right",
+            "properties": {
+              "color": "#79c9d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 210.5,
+              "y": 75
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/642a69ac-1bf4-42c8-b5e3-2e35d23fb4c0/",
+            "owner": "gpelouze",
+            "virtual_lab": "laserfarm",
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-build:v0.0.8",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-runtime:v0.0.8"
+            },
+            "dependencies": [],
+            "inputs": [
+              {
+                "name": "tiles",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "unique_tiles",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": [],
+            "title": "s4-unique-tiles-gpelouze",
+            "description": "s4-unique-tiles-gpelouze",
+            "created": "2025-06-14T15:10:29.089279Z",
+            "modified": "2025-06-14T15:25:17.766432Z",
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s4-unique-tiles-gpelouze:264eca9",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/f70ab5b41f3daa7b1b1fd25bd03cfb83a7e6a606/s4-unique-tiles-gpelouze"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 152
+        }
+      },
+      "d6d29e97-2ff3-4ee8-9fd0-56911f25e249": {
+        "id": "d6d29e97-2ff3-4ee8-9fd0-56911f25e249",
+        "position": {
+          "x": 344.25486167407433,
+          "y": 686.7971887550204
+        },
+        "orientation": 0,
+        "type": "splitter",
+        "ports": {
+          "splitter_source": {
+            "id": "splitter_source",
+            "type": "left",
+            "properties": {
+              "color": "#86642d",
+              "parentNodeType": "splitter"
+            },
+            "position": {
+              "x": -2,
+              "y": 50
+            }
+          },
+          "splitter_target": {
+            "id": "splitter_target",
+            "type": "right",
+            "properties": {
+              "color": "#5940bf",
+              "parentNodeType": "splitter"
+            },
+            "position": {
+              "x": 202,
+              "y": 50
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "id": "splitter",
+            "title": "Splitter",
+            "type": "splitter",
+            "container_image": "",
+            "dependencies": [],
+            "inputs": [
+              {
+                "name": "splitter_source",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "splitter_target",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": []
+          }
+        },
+        "size": {
+          "width": 202,
+          "height": 102
+        }
+      },
+      "479689e9-b33e-4819-907c-54d9765e382b": {
+        "id": "479689e9-b33e-4819-907c-54d9765e382b",
+        "position": {
+          "x": 1770.1262626262635,
+          "y": 680.3787878787882
+        },
+        "orientation": 0,
+        "type": "merger",
+        "ports": {
+          "merger_source": {
+            "id": "merger_source",
+            "type": "left",
+            "properties": {
+              "color": "#1f9384",
+              "parentNodeType": "merger"
+            },
+            "position": {
+              "x": -2,
+              "y": 50
+            }
+          },
+          "merger_target": {
+            "id": "merger_target",
+            "type": "right",
+            "properties": {
+              "color": "#562d86",
+              "parentNodeType": "merger"
+            },
+            "position": {
+              "x": 202,
+              "y": 50
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "id": "merger",
+            "title": "Merger",
+            "type": "merger",
+            "container_image": "",
+            "dependencies": [],
+            "inputs": [
+              {
+                "name": "merger_source",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "merger_target",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": []
+          }
+        },
+        "size": {
+          "width": 202,
+          "height": 102
+        }
+      },
+      "73428ef2-4437-48b3-8d30-1d8c307a100a": {
+        "id": "73428ef2-4437-48b3-8d30-1d8c307a100a",
+        "position": {
+          "x": 2317.5178571428546,
+          "y": 682.9285714285705
+        },
+        "orientation": 0,
+        "type": "splitter",
+        "ports": {
+          "splitter_source": {
+            "id": "splitter_source",
+            "type": "left",
+            "properties": {
+              "color": "#86642d",
+              "parentNodeType": "splitter"
+            },
+            "position": {
+              "x": -2,
+              "y": 50
+            }
+          },
+          "splitter_target": {
+            "id": "splitter_target",
+            "type": "right",
+            "properties": {
+              "color": "#5940bf",
+              "parentNodeType": "splitter"
+            },
+            "position": {
+              "x": 202,
+              "y": 50
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "id": "splitter",
+            "title": "Splitter",
+            "type": "splitter",
+            "container_image": "",
+            "dependencies": [],
+            "inputs": [
+              {
+                "name": "splitter_source",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "splitter_target",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": []
+          }
+        },
+        "size": {
+          "width": 202,
+          "height": 102
+        }
+      },
+      "496c766e-4a23-49b7-9629-1e3920f324e5": {
+        "id": "496c766e-4a23-49b7-9629-1e3920f324e5",
+        "position": {
+          "x": 2882.1504367934194,
+          "y": 685.1639260020545
+        },
+        "orientation": 0,
+        "type": "merger",
+        "ports": {
+          "merger_source": {
+            "id": "merger_source",
+            "type": "left",
+            "properties": {
+              "color": "#1f9384",
+              "parentNodeType": "merger"
+            },
+            "position": {
+              "x": -2,
+              "y": 50
+            }
+          },
+          "merger_target": {
+            "id": "merger_target",
+            "type": "right",
+            "properties": {
+              "color": "#562d86",
+              "parentNodeType": "merger"
+            },
+            "position": {
+              "x": 202,
+              "y": 50
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "id": "merger",
+            "title": "Merger",
+            "type": "merger",
+            "container_image": "",
+            "dependencies": [],
+            "inputs": [
+              {
+                "name": "merger_source",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "merger_target",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": []
+          }
+        },
+        "size": {
+          "width": 202,
+          "height": 102
+        }
+      },
+      "df10aee6-bd99-4598-a3bb-6854d72e4c04": {
+        "id": "df10aee6-bd99-4598-a3bb-6854d72e4c04",
+        "position": {
+          "x": 926.9697481580109,
+          "y": 687.1716589575561
+        },
+        "orientation": 0,
+        "type": "merger",
+        "ports": {
+          "merger_source": {
+            "id": "merger_source",
+            "type": "left",
+            "properties": {
+              "color": "#1f9384",
+              "parentNodeType": "merger"
+            },
+            "position": {
+              "x": -2,
+              "y": 50
+            }
+          },
+          "merger_target": {
+            "id": "merger_target",
+            "type": "right",
+            "properties": {
+              "color": "#562d86",
+              "parentNodeType": "merger"
+            },
+            "position": {
+              "x": 202,
+              "y": 50
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "id": "merger",
+            "title": "Merger",
+            "type": "merger",
+            "container_image": "",
+            "dependencies": [],
+            "inputs": [
+              {
+                "name": "merger_source",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "merger_target",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": []
+          }
+        },
+        "size": {
+          "width": 202,
+          "height": 102
+        }
+      },
+      "c1fd78b7-534b-4285-b07f-e2a3a98bb9b9": {
+        "id": "c1fd78b7-534b-4285-b07f-e2a3a98bb9b9",
+        "position": {
+          "x": 1200.493300277725,
+          "y": 688.3739821241375
+        },
+        "orientation": 0,
+        "type": "splitter",
+        "ports": {
+          "splitter_source": {
+            "id": "splitter_source",
+            "type": "left",
+            "properties": {
+              "color": "#86642d",
+              "parentNodeType": "splitter"
+            },
+            "position": {
+              "x": -2,
+              "y": 50
+            }
+          },
+          "splitter_target": {
+            "id": "splitter_target",
+            "type": "right",
+            "properties": {
+              "color": "#5940bf",
+              "parentNodeType": "splitter"
+            },
+            "position": {
+              "x": 202,
+              "y": 50
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "id": "splitter",
+            "title": "Splitter",
+            "type": "splitter",
+            "container_image": "",
+            "dependencies": [],
+            "inputs": [
+              {
+                "name": "splitter_source",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "splitter_target",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": []
+          }
+        },
+        "size": {
+          "width": 202,
+          "height": 102
+        }
+      },
+      "bd726879-7b3f-4663-a293-04c4968ac6c9": {
+        "id": "bd726879-7b3f-4663-a293-04c4968ac6c9",
+        "position": {
+          "x": 2570.287769784174,
+          "y": 660.2158273381297
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "unique_tiles": {
+            "id": "unique_tiles",
+            "type": "left",
+            "properties": {
+              "color": "#79c9d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 39.5,
+              "y": 75
+            }
+          },
+          "feature_files": {
+            "id": "feature_files",
+            "type": "right",
+            "properties": {
+              "color": "#d2bb79",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 209.5,
+              "y": 75
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/71891d4f-a30e-48a1-bedf-c76e61fe14fd/",
+            "owner": "gpelouze",
+            "virtual_lab": "laserfarm",
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.0.8",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.0.8"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "DataProcessing",
+                "module": "laserfarm",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "unique_tiles",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "feature_files",
+                "type": "list"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_local_path_retiled",
+                "assignation": "conf_local_path_retiled = os.path.join('/tmp/data', 'retiled')"
+              },
+              {
+                "name": "conf_local_path_targets",
+                "assignation": "conf_local_path_targets = os.path.join('/tmp/data', 'targets')"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_apply_filter_value",
+                "type": "str",
+                "default_value": "1"
+              },
+              {
+                "name": "param_attribute",
+                "type": "str",
+                "default_value": "raw_classification"
+              },
+              {
+                "name": "param_feature_name",
+                "type": "str",
+                "default_value": "perc_95_normalized_height"
+              },
+              {
+                "name": "param_filter_type",
+                "type": "str",
+                "default_value": "select_equal"
+              },
+              {
+                "name": "param_max_x",
+                "type": "str",
+                "default_value": "398892.19"
+              },
+              {
+                "name": "param_max_y",
+                "type": "str",
+                "default_value": "726783.87"
+              },
+              {
+                "name": "param_min_x",
+                "type": "str",
+                "default_value": "-113107.81"
+              },
+              {
+                "name": "param_min_y",
+                "type": "str",
+                "default_value": "214783.87"
+              },
+              {
+                "name": "param_n_tiles_side",
+                "type": "str",
+                "default_value": "512"
+              },
+              {
+                "name": "param_tile_mesh_size",
+                "type": "str",
+                "default_value": "10."
+              },
+              {
+                "name": "param_validate_precision",
+                "type": "str",
+                "default_value": "0.001"
+              }
+            ],
+            "secrets": [],
+            "title": "s5-extract-features-gpelouze",
+            "description": "s5-extract-features-gpelouze",
+            "created": "2025-06-14T15:14:10.835719Z",
+            "modified": "2025-06-14T16:15:42.083854Z",
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s5-extract-features-gpelouze:bf2de67",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/6808bc4b9717775725e2a9ac5a8af3fc6821a937/s5-extract-features-gpelouze"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 152
+        }
+      },
+      "6e5e826d-84c6-4f86-add1-c558033a6d30": {
+        "id": "6e5e826d-84c6-4f86-add1-c558033a6d30",
+        "position": {
+          "x": 3492.0168934697695,
+          "y": 665.3260869565207
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "geotiff_file_local": {
+            "id": "geotiff_file_local",
+            "type": "left",
+            "properties": {
+              "color": "#937a1f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 53,
+              "y": 75
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/1fcfb7b6-8b3b-44aa-890e-693595d5420b/",
+            "owner": "gpelouze",
+            "virtual_lab": "laserfarm",
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-build:v0.0.8",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-runtime:v0.0.8"
+            },
+            "dependencies": [
+              {
+                "name": "Minio",
+                "module": "minio",
+                "asname": null
+              },
+              {
+                "name": "rasterio",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "matplotlib.pyplot",
+                "module": "",
+                "asname": "plt"
+              },
+              {
+                "name": "rasterio.plot",
+                "module": "",
+                "asname": "rp"
+              }
+            ],
+            "inputs": [
+              {
+                "name": "geotiff_file_local",
+                "type": "str"
+              }
+            ],
+            "outputs": [],
+            "confs": [
+              {
+                "name": "conf_local_path_figures",
+                "assignation": "conf_local_path_figures = os.path.join('/tmp/data', 'figures')"
+              },
+              {
+                "name": "conf_local_tmp",
+                "assignation": "conf_local_tmp = '/tmp/data'"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_feature_name",
+                "type": "str",
+                "default_value": "perc_95_normalized_height"
+              },
+              {
+                "name": "param_minio_endpoint",
+                "type": "str",
+                "default_value": "scruffy.lab.uvalight.net:9000"
+              },
+              {
+                "name": "param_minio_public_dataset_prefix",
+                "type": "str",
+                "default_value": "vl-laserfarm/small_terschelling/ahn3/"
+              },
+              {
+                "name": "param_minio_user_bucket",
+                "type": "str",
+                "default_value": "naa-vre-user-data"
+              },
+              {
+                "name": "param_minio_user_prefix",
+                "type": "str",
+                "default_value": ""
+              }
+            ],
+            "secrets": [
+              {
+                "name": "secret_minio_access_key",
+                "type": "str"
+              },
+              {
+                "name": "secret_minio_secret_key",
+                "type": "str"
+              }
+            ],
+            "title": "s7-figures-gpelouze",
+            "description": "s7-figures-gpelouze",
+            "created": "2025-06-14T15:15:28.321027Z",
+            "modified": "2025-06-15T09:29:15.912506Z",
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s7-figures-gpelouze:6be9dcb",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/c6d04694c5c54459acbaa8f5c7cd4e9cd0e303de/s7-figures-gpelouze"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 152
+        }
+      },
+      "43fff144-5772-4d47-9bb1-a89a74180d6a": {
+        "id": "43fff144-5772-4d47-9bb1-a89a74180d6a",
+        "position": {
+          "x": 3155.060371730638,
+          "y": 663.5144927536237
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "feature_files": {
+            "id": "feature_files",
+            "type": "left",
+            "properties": {
+              "color": "#d2bb79",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 40.5,
+              "y": 75
+            }
+          },
+          "geotiff_file_local": {
+            "id": "geotiff_file_local",
+            "type": "right",
+            "properties": {
+              "color": "#937a1f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 197,
+              "y": 75
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/09c09cb3-6d81-451f-9990-aa479c1552a5/",
+            "owner": "gpelouze",
+            "virtual_lab": "laserfarm",
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.0.8",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.0.8"
+            },
+            "dependencies": [
+              {
+                "name": "Minio",
+                "module": "minio",
+                "asname": null
+              },
+              {
+                "name": "GeotiffWriter",
+                "module": "laserfarm",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "feature_files",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "geotiff_file_local",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_local_path_targets",
+                "assignation": "conf_local_path_targets = os.path.join('/tmp/data', 'targets')"
+              },
+              {
+                "name": "conf_local_path_geotiff",
+                "assignation": "conf_local_path_geotiff = os.path.join('/tmp/data', 'geotiff')"
+              },
+              {
+                "name": "conf_local_tmp",
+                "assignation": "conf_local_tmp = '/tmp/data'"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_feature_name",
+                "type": "str",
+                "default_value": "perc_95_normalized_height"
+              },
+              {
+                "name": "param_minio_endpoint",
+                "type": "str",
+                "default_value": "scruffy.lab.uvalight.net:9000"
+              },
+              {
+                "name": "param_minio_public_dataset_prefix",
+                "type": "str",
+                "default_value": "vl-laserfarm/small_terschelling/ahn3/"
+              },
+              {
+                "name": "param_minio_user_bucket",
+                "type": "str",
+                "default_value": "naa-vre-user-data"
+              },
+              {
+                "name": "param_minio_user_prefix",
+                "type": "str",
+                "default_value": ""
+              }
+            ],
+            "secrets": [
+              {
+                "name": "secret_minio_access_key",
+                "type": "str"
+              },
+              {
+                "name": "secret_minio_secret_key",
+                "type": "str"
+              }
+            ],
+            "title": "s6-save-geotiff-gpelouze",
+            "description": "s6-save-geotiff-gpelouze",
+            "created": "2025-06-14T15:14:48.339736Z",
+            "modified": "2025-06-15T09:34:54.627150Z",
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s6-save-geotiff-gpelouze:7209b1e",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/5dcc79c5fa9af58c79c53e2bce9076007277bc0d/s6-save-geotiff-gpelouze"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 152
+        }
+      }
+    },
+    "links": {
+      "048b64ba-264c-431d-a8bb-ce91fd77ff95": {
+        "id": "048b64ba-264c-431d-a8bb-ce91fd77ff95",
+        "from": {
+          "nodeId": "b8f006cc-cd2a-4b28-ae8e-3e94f044a2aa",
+          "portId": "raw_laz_files"
+        },
+        "to": {
+          "nodeId": "d6d29e97-2ff3-4ee8-9fd0-56911f25e249",
+          "portId": "splitter_source"
+        }
+      },
+      "2e539c1d-4278-451f-b208-2e77fc315159": {
+        "id": "2e539c1d-4278-451f-b208-2e77fc315159",
+        "from": {
+          "nodeId": "d6d29e97-2ff3-4ee8-9fd0-56911f25e249",
+          "portId": "splitter_target"
+        },
+        "to": {
+          "nodeId": "f7dc769b-7bb4-4e45-a643-faca46cd4ae7",
+          "portId": "raw_laz_files"
+        }
+      },
+      "9a9881a2-f9da-417d-89a1-240b0f774445": {
+        "id": "9a9881a2-f9da-417d-89a1-240b0f774445",
+        "from": {
+          "nodeId": "eb57a963-dfae-487a-b787-d8b8f620d425",
+          "portId": "tiles"
+        },
+        "to": {
+          "nodeId": "479689e9-b33e-4819-907c-54d9765e382b",
+          "portId": "merger_source"
+        }
+      },
+      "904b06b0-fa7a-48ee-98da-fd9a8db03e97": {
+        "id": "904b06b0-fa7a-48ee-98da-fd9a8db03e97",
+        "from": {
+          "nodeId": "479689e9-b33e-4819-907c-54d9765e382b",
+          "portId": "merger_target"
+        },
+        "to": {
+          "nodeId": "3357a349-1b42-4200-ad93-d49fb94db0b5",
+          "portId": "tiles"
+        }
+      },
+      "90f0e71c-1f6a-4d84-93a3-9c93c81cc10f": {
+        "id": "90f0e71c-1f6a-4d84-93a3-9c93c81cc10f",
+        "from": {
+          "nodeId": "3357a349-1b42-4200-ad93-d49fb94db0b5",
+          "portId": "unique_tiles"
+        },
+        "to": {
+          "nodeId": "73428ef2-4437-48b3-8d30-1d8c307a100a",
+          "portId": "splitter_source"
+        }
+      },
+      "2643d171-ab06-49e4-9889-c2fe89a76b61": {
+        "id": "2643d171-ab06-49e4-9889-c2fe89a76b61",
+        "from": {
+          "nodeId": "f7dc769b-7bb4-4e45-a643-faca46cd4ae7",
+          "portId": "split_laz_files"
+        },
+        "to": {
+          "nodeId": "df10aee6-bd99-4598-a3bb-6854d72e4c04",
+          "portId": "merger_source"
+        }
+      },
+      "671da279-715c-44d3-a463-92af4d5ea865": {
+        "id": "671da279-715c-44d3-a463-92af4d5ea865",
+        "from": {
+          "nodeId": "df10aee6-bd99-4598-a3bb-6854d72e4c04",
+          "portId": "merger_target"
+        },
+        "to": {
+          "nodeId": "c1fd78b7-534b-4285-b07f-e2a3a98bb9b9",
+          "portId": "splitter_source"
+        }
+      },
+      "aa321da9-b413-44a5-9937-af24f93b76b4": {
+        "id": "aa321da9-b413-44a5-9937-af24f93b76b4",
+        "from": {
+          "nodeId": "c1fd78b7-534b-4285-b07f-e2a3a98bb9b9",
+          "portId": "splitter_target"
+        },
+        "to": {
+          "nodeId": "eb57a963-dfae-487a-b787-d8b8f620d425",
+          "portId": "split_laz_files"
+        }
+      },
+      "56b3344d-3b5f-4968-a4ef-547783df13f8": {
+        "id": "56b3344d-3b5f-4968-a4ef-547783df13f8",
+        "from": {
+          "nodeId": "73428ef2-4437-48b3-8d30-1d8c307a100a",
+          "portId": "splitter_target"
+        },
+        "to": {
+          "nodeId": "bd726879-7b3f-4663-a293-04c4968ac6c9",
+          "portId": "unique_tiles"
+        }
+      },
+      "95cb65bf-07b4-46e9-8b14-9db33596a290": {
+        "id": "95cb65bf-07b4-46e9-8b14-9db33596a290",
+        "from": {
+          "nodeId": "bd726879-7b3f-4663-a293-04c4968ac6c9",
+          "portId": "feature_files"
+        },
+        "to": {
+          "nodeId": "496c766e-4a23-49b7-9629-1e3920f324e5",
+          "portId": "merger_source"
+        }
+      },
+      "a7abd5ce-d11b-4c69-89b3-9d15fa65f6d5": {
+        "id": "a7abd5ce-d11b-4c69-89b3-9d15fa65f6d5",
+        "from": {
+          "nodeId": "496c766e-4a23-49b7-9629-1e3920f324e5",
+          "portId": "merger_target"
+        },
+        "to": {
+          "nodeId": "43fff144-5772-4d47-9bb1-a89a74180d6a",
+          "portId": "feature_files"
+        }
+      },
+      "a4d131b4-0928-435d-b0c2-6ed89986d425": {
+        "id": "a4d131b4-0928-435d-b0c2-6ed89986d425",
+        "from": {
+          "nodeId": "43fff144-5772-4d47-9bb1-a89a74180d6a",
+          "portId": "geotiff_file_local"
+        },
+        "to": {
+          "nodeId": "6e5e826d-84c6-4f86-add1-c558033a6d30",
+          "portId": "geotiff_file_local"
+        }
+      }
+    },
+    "selected": {},
+    "hovered": {}
+  }
+}
