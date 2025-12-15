@@ -1,10 +1,10 @@
 {
   "chart": {
     "offset": {
-      "x": -475.06,
-      "y": 127.74
+      "x": -494.4,
+      "y": -315.74
     },
-    "scale": 0.552,
+    "scale": 0.864,
     "nodes": {
       "b8f006cc-cd2a-4b28-ae8e-3e94f044a2aa": {
         "id": "b8f006cc-cd2a-4b28-ae8e-3e94f044a2aa",
@@ -23,8 +23,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 207.5,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
@@ -91,7 +91,7 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       },
       "eb57a963-dfae-487a-b787-d8b8f620d425": {
@@ -111,8 +111,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 44,
-              "y": 75
+              "x": -2,
+              "y": 30
             }
           },
           "tiles": {
@@ -123,8 +123,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 234.5,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
@@ -215,7 +215,7 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       },
       "f7dc769b-7bb4-4e45-a643-faca46cd4ae7": {
@@ -235,8 +235,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 42.5,
-              "y": 75
+              "x": -2,
+              "y": 30
             }
           },
           "split_laz_files": {
@@ -247,8 +247,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 206,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
@@ -315,7 +315,7 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       },
       "3357a349-1b42-4200-ad93-d49fb94db0b5": {
@@ -335,8 +335,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 15.5,
-              "y": 75
+              "x": -2,
+              "y": 30
             }
           },
           "unique_tiles": {
@@ -347,8 +347,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 210.5,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
@@ -388,7 +388,7 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       },
       "d6d29e97-2ff3-4ee8-9fd0-56911f25e249": {
@@ -409,7 +409,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "splitter_target": {
@@ -421,7 +421,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -451,7 +451,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "479689e9-b33e-4819-907c-54d9765e382b": {
@@ -472,7 +472,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "merger_target": {
@@ -484,7 +484,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -514,7 +514,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "73428ef2-4437-48b3-8d30-1d8c307a100a": {
@@ -535,7 +535,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "splitter_target": {
@@ -547,7 +547,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -577,7 +577,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "496c766e-4a23-49b7-9629-1e3920f324e5": {
@@ -598,7 +598,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "merger_target": {
@@ -610,7 +610,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -640,7 +640,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "df10aee6-bd99-4598-a3bb-6854d72e4c04": {
@@ -661,7 +661,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "merger_target": {
@@ -673,7 +673,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -703,7 +703,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "c1fd78b7-534b-4285-b07f-e2a3a98bb9b9": {
@@ -724,7 +724,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "splitter_target": {
@@ -736,7 +736,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -766,7 +766,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "bd726879-7b3f-4663-a293-04c4968ac6c9": {
@@ -786,8 +786,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 39.5,
-              "y": 75
+              "x": -2,
+              "y": 30
             }
           },
           "feature_files": {
@@ -798,8 +798,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 209.5,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
@@ -915,7 +915,7 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       },
       "6e5e826d-84c6-4f86-add1-c558033a6d30": {
@@ -935,8 +935,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 53,
-              "y": 75
+              "x": -2,
+              "y": 30
             }
           }
         },
@@ -1041,7 +1041,7 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       },
       "43fff144-5772-4d47-9bb1-a89a74180d6a": {
@@ -1061,8 +1061,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 40.5,
-              "y": 75
+              "x": -2,
+              "y": 30
             }
           },
           "geotiff_file_local": {
@@ -1073,8 +1073,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 197,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
@@ -1178,7 +1178,7 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       }
     },
