@@ -1,0 +1,479 @@
+{
+  "chart": {
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "scale": 1,
+    "nodes": {
+      "ff2e6cfc-22d5-4b69-903c-f532d7e7ce53": {
+        "id": "ff2e6cfc-22d5-4b69-903c-f532d7e7ce53",
+        "position": {
+          "x": 426,
+          "y": 155
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "las_data_filename_batches": {
+            "id": "las_data_filename_batches",
+            "type": "right",
+            "properties": {
+              "color": "#50783a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/238591a9-9c42-4b66-b2f4-fc2c5c5b71ec/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "laserfarm",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.0.45",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.0.45"
+            },
+            "dependencies": [
+              {
+                "name": "List",
+                "module": "typing",
+                "asname": null
+              },
+              {
+                "name": "Minio",
+                "module": "minio",
+                "asname": null
+              },
+              {
+                "name": "S3Error",
+                "module": "minio.error",
+                "asname": null
+              },
+              {
+                "name": "random",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "math",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "warnings",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "las_data_filename_batches",
+                "type": "list"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_minio_path_to_process",
+                "assignation": "conf_minio_path_to_process = 'toProcess'"
+              },
+              {
+                "name": "conf_minio_path_processed",
+                "assignation": "conf_minio_path_processed = 'processed'"
+              },
+              {
+                "name": "conf_local_path_raw",
+                "assignation": "conf_local_path_raw = os.path.join('/tmp/data', 'raw')"
+              },
+              {
+                "name": "conf_local_path_retiled",
+                "assignation": "conf_local_path_retiled = os.path.join('/tmp/data', 'retiled')"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_feature_name",
+                "type": "str",
+                "default_value": "perc_95_normalized_height"
+              },
+              {
+                "name": "param_files_to_process_file",
+                "type": "str",
+                "default_value": "AHN6_url_test.txt"
+              },
+              {
+                "name": "param_max_nodes",
+                "type": "int",
+                "default_value": "2"
+              },
+              {
+                "name": "param_max_tiles",
+                "type": "int",
+                "default_value": "4"
+              },
+              {
+                "name": "param_minio_endpoint",
+                "type": "str",
+                "default_value": "scruffy.lab.uvalight.net:9000"
+              },
+              {
+                "name": "param_minio_virtual_lab_bucket",
+                "type": "str",
+                "default_value": "naa-vre-laserfarm"
+              },
+              {
+                "name": "param_processed_files_record_file",
+                "type": "str",
+                "default_value": "processed_files_log.txt"
+              }
+            ],
+            "secrets": [
+              {
+                "name": "secret_minio_access_key",
+                "type": "str"
+              },
+              {
+                "name": "secret_minio_secret_key",
+                "type": "str"
+              }
+            ],
+            "title": "datafiles-processing-manager-koen-greuell-lifewatch-eu",
+            "description": "datafiles-processing-manager-koen-greuell-lifewatch-eu",
+            "created": "2025-12-30T12:26:37.160166Z",
+            "modified": "2025-12-30T12:26:37.655669Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/datafiles-processing-manager-koen-greuell-lifewatch-eu:25c6824",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/068f3c4d63a757614c66a3f47ef2aef97be47299/datafiles-processing-manager-koen-greuell-lifewatch-eu",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "cb4cb703-e630-4761-804f-2ed5f48b77fc": {
+        "id": "cb4cb703-e630-4761-804f-2ed5f48b77fc",
+        "position": {
+          "x": 1029,
+          "y": 157
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "las_data_filename_batches": {
+            "id": "las_data_filename_batches",
+            "type": "left",
+            "properties": {
+              "color": "#50783a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/938cb951-f8c6-43e5-8239-702ca758d22c/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "laserfarm",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.0.45",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.0.45"
+            },
+            "dependencies": [
+              {
+                "name": "List",
+                "module": "typing",
+                "asname": null
+              },
+              {
+                "name": "Minio",
+                "module": "minio",
+                "asname": null
+              },
+              {
+                "name": "S3Error",
+                "module": "minio.error",
+                "asname": null
+              },
+              {
+                "name": "Path",
+                "module": "pathlib",
+                "asname": null
+              },
+              {
+                "name": "request",
+                "module": "urllib",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "json",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "Retiler",
+                "module": "laserfarm",
+                "asname": null
+              },
+              {
+                "name": "io",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "DataProcessing",
+                "module": "laserfarm",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "las_data_filename_batches",
+                "type": "list"
+              }
+            ],
+            "outputs": [],
+            "confs": [
+              {
+                "name": "conf_local_path_raw",
+                "assignation": "conf_local_path_raw = os.path.join('/tmp/data', 'raw')"
+              },
+              {
+                "name": "conf_local_path_retiled",
+                "assignation": "conf_local_path_retiled = os.path.join('/tmp/data', 'retiled')"
+              },
+              {
+                "name": "conf_local_path_targets",
+                "assignation": "conf_local_path_targets = os.path.join('/tmp/data', 'targets')"
+              },
+              {
+                "name": "conf_minio_path_processed",
+                "assignation": "conf_minio_path_processed = 'processed'"
+              },
+              {
+                "name": "conf_minio_path_ply",
+                "assignation": "conf_minio_path_ply = 'ply'"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_apply_filter_value",
+                "type": "str",
+                "default_value": "1"
+              },
+              {
+                "name": "param_attribute",
+                "type": "str",
+                "default_value": "raw_classification"
+              },
+              {
+                "name": "param_feature_name",
+                "type": "str",
+                "default_value": "perc_95_normalized_height"
+              },
+              {
+                "name": "param_filter_type",
+                "type": "str",
+                "default_value": "select_equal"
+              },
+              {
+                "name": "param_max_x",
+                "type": "str",
+                "default_value": "398892.19"
+              },
+              {
+                "name": "param_max_y",
+                "type": "str",
+                "default_value": "726783.87"
+              },
+              {
+                "name": "param_min_x",
+                "type": "str",
+                "default_value": "-113107.81"
+              },
+              {
+                "name": "param_min_y",
+                "type": "str",
+                "default_value": "214783.87"
+              },
+              {
+                "name": "param_minio_endpoint",
+                "type": "str",
+                "default_value": "scruffy.lab.uvalight.net:9000"
+              },
+              {
+                "name": "param_minio_virtual_lab_bucket",
+                "type": "str",
+                "default_value": "naa-vre-laserfarm"
+              },
+              {
+                "name": "param_n_tiles_side",
+                "type": "str",
+                "default_value": "512"
+              },
+              {
+                "name": "param_processed_files_record_file",
+                "type": "str",
+                "default_value": "processed_files_log.txt"
+              },
+              {
+                "name": "param_tile_mesh_size",
+                "type": "str",
+                "default_value": "10."
+              },
+              {
+                "name": "param_validate_precision",
+                "type": "str",
+                "default_value": "0.001"
+              }
+            ],
+            "secrets": [
+              {
+                "name": "secret_minio_access_key",
+                "type": "str"
+              },
+              {
+                "name": "secret_minio_secret_key",
+                "type": "str"
+              }
+            ],
+            "title": "laserfarm-runner-koen-greuell-lifewatch-eu",
+            "description": "laserfarm-runner-koen-greuell-lifewatch-eu",
+            "created": "2025-12-30T12:01:50.892225Z",
+            "modified": "2025-12-30T12:01:51.634453Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/laserfarm-runner-koen-greuell-lifewatch-eu:f64e7e9",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/3bd51d0572d261e9497e5255b76f463cb3d11d4f/laserfarm-runner-koen-greuell-lifewatch-eu",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "d297a659-a12b-4afc-a31c-a187a0e786a8": {
+        "id": "d297a659-a12b-4afc-a31c-a187a0e786a8",
+        "position": {
+          "x": 760,
+          "y": 157
+        },
+        "orientation": 0,
+        "type": "splitter",
+        "ports": {
+          "splitter_source": {
+            "id": "splitter_source",
+            "type": "left",
+            "properties": {
+              "color": "#86642d",
+              "parentNodeType": "splitter"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          },
+          "splitter_target": {
+            "id": "splitter_target",
+            "type": "right",
+            "properties": {
+              "color": "#5940bf",
+              "parentNodeType": "splitter"
+            },
+            "position": {
+              "x": 202,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "splitter",
+            "title": "Splitter",
+            "description": "Split the input list and distribute its items to multiple containers that run in parallel.",
+            "type": "splitter",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "version": 1,
+            "next_version": null,
+            "container_image": "",
+            "base_container_image": {
+              "build": "",
+              "runtime": ""
+            },
+            "dependencies": [],
+            "inputs": [
+              {
+                "name": "splitter_source",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "splitter_target",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": []
+          }
+        },
+        "size": {
+          "width": 202,
+          "height": 61
+        }
+      }
+    },
+    "links": {
+      "af01ec4b-9b76-4be2-b7dd-b5c84ec22008": {
+        "id": "af01ec4b-9b76-4be2-b7dd-b5c84ec22008",
+        "from": {
+          "nodeId": "ff2e6cfc-22d5-4b69-903c-f532d7e7ce53",
+          "portId": "las_data_filename_batches"
+        },
+        "to": {
+          "nodeId": "d297a659-a12b-4afc-a31c-a187a0e786a8",
+          "portId": "splitter_source"
+        }
+      },
+      "462fe509-8278-4a05-bed2-55ad712ed5ea": {
+        "id": "462fe509-8278-4a05-bed2-55ad712ed5ea",
+        "from": {
+          "nodeId": "d297a659-a12b-4afc-a31c-a187a0e786a8",
+          "portId": "splitter_target"
+        },
+        "to": {
+          "nodeId": "cb4cb703-e630-4761-804f-2ed5f48b77fc",
+          "portId": "las_data_filename_batches"
+        }
+      }
+    },
+    "selected": {},
+    "hovered": {}
+  }
+}
