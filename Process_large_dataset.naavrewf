@@ -223,11 +223,11 @@
           "height": 61
         }
       },
-      "70748b1a-5b95-42a1-8b45-2e8f2cb27c44": {
-        "id": "70748b1a-5b95-42a1-8b45-2e8f2cb27c44",
+      "9dc9eb48-2974-4efe-b07d-519c19c13cdc": {
+        "id": "9dc9eb48-2974-4efe-b07d-519c19c13cdc",
         "position": {
-          "x": 1031.9500122070312,
-          "y": 197
+          "x": 1053.9500122070312,
+          "y": 230
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -247,7 +247,7 @@
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/d3cde2fc-6f2e-45ce-b5b1-be6ca4ea7cfd/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/13f63b73-5883-492a-a70c-4b36dd9e7f70/",
             "owner": "koen.greuell@lifewatch.eu",
             "virtual_lab": "laserfarm",
             "shared_with_scopes": [],
@@ -257,11 +257,6 @@
               "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.0.46"
             },
             "dependencies": [
-              {
-                "name": "DataProcessing",
-                "module": "laserfarm",
-                "asname": null
-              },
               {
                 "name": "List",
                 "module": "typing",
@@ -293,12 +288,17 @@
                 "asname": null
               },
               {
-                "name": "gc",
+                "name": "json",
                 "module": "",
                 "asname": null
               },
               {
-                "name": "json",
+                "name": "urllib.error",
+                "module": "",
+                "asname": "urlerror"
+              },
+              {
+                "name": "gc",
                 "module": "",
                 "asname": null
               },
@@ -311,6 +311,16 @@
                 "name": "io",
                 "module": "",
                 "asname": null
+              },
+              {
+                "name": "time",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "DataProcessing",
+                "module": "laserfarm",
+                "asname": null
               }
             ],
             "inputs": [
@@ -321,6 +331,10 @@
             ],
             "outputs": [],
             "confs": [
+              {
+                "name": "conf_urlerror_wait_time",
+                "assignation": "conf_urlerror_wait_time = 5"
+              },
               {
                 "name": "conf_local_path_raw",
                 "assignation": "conf_local_path_raw = os.path.join('/tmp/data', 'raw')"
@@ -401,7 +415,7 @@
               {
                 "name": "param_processed_files_record_file",
                 "type": "str",
-                "default_value": "processed_files_log12.txt"
+                "default_value": "processed_files_log.txt"
               },
               {
                 "name": "param_tile_mesh_size",
@@ -426,12 +440,12 @@
             ],
             "title": "laserfarm-runner-koen-greuell-lifewatch-eu",
             "description": "laserfarm-runner-koen-greuell-lifewatch-eu",
-            "created": "2026-01-05T11:41:28.676605Z",
-            "modified": "2026-01-05T11:41:29.409984Z",
-            "version": 4,
-            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/laserfarm-runner-koen-greuell-lifewatch-eu:cfd1061",
+            "created": "2026-01-05T13:47:32.916022Z",
+            "modified": "2026-01-05T13:47:33.865060Z",
+            "version": 6,
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/laserfarm-runner-koen-greuell-lifewatch-eu:70cde91",
             "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/ef629eecc6bccdcd217adaaf4179da8a04af8e63/laserfarm-runner-koen-greuell-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/50d2c6ce4253d24d83cffe22b9a93f16a0588b69/laserfarm-runner-koen-greuell-lifewatch-eu",
             "next_version": null
           }
         },
@@ -453,14 +467,14 @@
           "portId": "splitter_source"
         }
       },
-      "c6f8d131-5d17-4e4c-8f85-1c6c5dd2910e": {
-        "id": "c6f8d131-5d17-4e4c-8f85-1c6c5dd2910e",
+      "ab267c2e-b437-4a70-8084-d1b6b730e1cf": {
+        "id": "ab267c2e-b437-4a70-8084-d1b6b730e1cf",
         "from": {
           "nodeId": "d297a659-a12b-4afc-a31c-a187a0e786a8",
           "portId": "splitter_target"
         },
         "to": {
-          "nodeId": "70748b1a-5b95-42a1-8b45-2e8f2cb27c44",
+          "nodeId": "9dc9eb48-2974-4efe-b07d-519c19c13cdc",
           "portId": "las_data_filename_batches"
         }
       }
