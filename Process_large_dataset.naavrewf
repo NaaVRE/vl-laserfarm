@@ -1,8 +1,8 @@
 {
   "chart": {
     "offset": {
-      "x": 0,
-      "y": 0
+      "x": 8,
+      "y": 1
     },
     "scale": 1,
     "nodes": {
@@ -223,11 +223,11 @@
           "height": 61
         }
       },
-      "0aa51075-7295-4da1-aad4-50f87f9436e1": {
-        "id": "0aa51075-7295-4da1-aad4-50f87f9436e1",
+      "522195ed-6cad-4f62-ad80-191c7234714b": {
+        "id": "522195ed-6cad-4f62-ad80-191c7234714b",
         "position": {
-          "x": 1069.9500122070312,
-          "y": 210
+          "x": 1089.9500122070312,
+          "y": 218
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -247,7 +247,7 @@
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/2aac63e7-0085-443e-acfd-1ff472da6023/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/d8a458dc-8207-4d48-b8c0-68ed18c383b3/",
             "owner": "koen.greuell@lifewatch.eu",
             "virtual_lab": "laserfarm",
             "shared_with_scopes": [],
@@ -257,6 +257,11 @@
               "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.0.46"
             },
             "dependencies": [
+              {
+                "name": "List",
+                "module": "typing",
+                "asname": null
+              },
               {
                 "name": "Minio",
                 "module": "minio",
@@ -311,11 +316,6 @@
                 "name": "DataProcessing",
                 "module": "laserfarm",
                 "asname": null
-              },
-              {
-                "name": "List",
-                "module": "typing",
-                "asname": null
               }
             ],
             "inputs": [
@@ -326,14 +326,6 @@
             ],
             "outputs": [],
             "confs": [
-              {
-                "name": "conf_local_path_raw",
-                "assignation": "conf_local_path_raw = os.path.join('/tmp/data', 'raw')"
-              },
-              {
-                "name": "conf_local_path_retiled",
-                "assignation": "conf_local_path_retiled = os.path.join('/tmp/data', 'retiled')"
-              },
               {
                 "name": "conf_local_path_targets",
                 "assignation": "conf_local_path_targets = os.path.join('/tmp/data', 'targets')"
@@ -353,9 +345,52 @@
               {
                 "name": "conf_minio_path_ply",
                 "assignation": "conf_minio_path_ply = 'ply'"
+              },
+              {
+                "name": "conf_local_path_raw",
+                "assignation": "conf_local_path_raw = os.path.join('/tmp/data', 'raw')"
+              },
+              {
+                "name": "conf_local_path_retiled",
+                "assignation": "conf_local_path_retiled = os.path.join('/tmp/data', 'retiled')"
               }
             ],
             "params": [
+              {
+                "name": "param_min_y",
+                "type": "str",
+                "default_value": "214783.87"
+              },
+              {
+                "name": "param_minio_endpoint",
+                "type": "str",
+                "default_value": "scruffy.lab.uvalight.net:9000"
+              },
+              {
+                "name": "param_minio_virtual_lab_bucket",
+                "type": "str",
+                "default_value": "naa-vre-laserfarm"
+              },
+              {
+                "name": "param_n_tiles_side",
+                "type": "str",
+                "default_value": "512"
+              },
+              {
+                "name": "param_processed_files_record_file",
+                "type": "str",
+                "default_value": "processed_files_log.txt"
+              },
+              {
+                "name": "param_tile_mesh_size",
+                "type": "str",
+                "default_value": "10."
+              },
+              {
+                "name": "param_validate_precision",
+                "type": "str",
+                "default_value": "0.001"
+              },
               {
                 "name": "param_apply_filter_value",
                 "type": "str",
@@ -395,41 +430,6 @@
                 "name": "param_min_x",
                 "type": "str",
                 "default_value": "-113107.81"
-              },
-              {
-                "name": "param_min_y",
-                "type": "str",
-                "default_value": "214783.87"
-              },
-              {
-                "name": "param_minio_endpoint",
-                "type": "str",
-                "default_value": "scruffy.lab.uvalight.net:9000"
-              },
-              {
-                "name": "param_minio_virtual_lab_bucket",
-                "type": "str",
-                "default_value": "naa-vre-laserfarm"
-              },
-              {
-                "name": "param_n_tiles_side",
-                "type": "str",
-                "default_value": "512"
-              },
-              {
-                "name": "param_processed_files_record_file",
-                "type": "str",
-                "default_value": "processed_files_log.txt"
-              },
-              {
-                "name": "param_tile_mesh_size",
-                "type": "str",
-                "default_value": "10."
-              },
-              {
-                "name": "param_validate_precision",
-                "type": "str",
-                "default_value": "0.001"
               }
             ],
             "secrets": [
@@ -444,12 +444,12 @@
             ],
             "title": "laserfarm-runner-koen-greuell-lifewatch-eu",
             "description": "laserfarm-runner-koen-greuell-lifewatch-eu",
-            "created": "2026-01-06T14:18:28.605587Z",
-            "modified": "2026-01-06T14:18:29.468747Z",
-            "version": 7,
+            "created": "2026-01-06T14:42:34.903456Z",
+            "modified": "2026-01-06T14:42:35.933540Z",
+            "version": 8,
             "container_image": "ghcr.io/naavre/cells-vl-laserfarm/laserfarm-runner-koen-greuell-lifewatch-eu:0d6da65",
             "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/1c80bdb6044cf256585c578f964eb424602048fb/laserfarm-runner-koen-greuell-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/8a7a86fbce5bb28f7a30f390a9d2f5172bccadcf/laserfarm-runner-koen-greuell-lifewatch-eu",
             "next_version": null
           }
         },
@@ -471,14 +471,14 @@
           "portId": "splitter_source"
         }
       },
-      "2da5090d-755c-4665-ad03-22c4c9bcddc3": {
-        "id": "2da5090d-755c-4665-ad03-22c4c9bcddc3",
+      "a2c00185-eeca-4c93-bb70-e86f4ef75d98": {
+        "id": "a2c00185-eeca-4c93-bb70-e86f4ef75d98",
         "from": {
           "nodeId": "d297a659-a12b-4afc-a31c-a187a0e786a8",
           "portId": "splitter_target"
         },
         "to": {
-          "nodeId": "0aa51075-7295-4da1-aad4-50f87f9436e1",
+          "nodeId": "522195ed-6cad-4f62-ad80-191c7234714b",
           "portId": "las_data_filename_batches"
         }
       }
