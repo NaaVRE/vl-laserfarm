@@ -43,7 +43,21 @@ A tutorial is available in [NaaVRE](https://beta.naavre.net/vreapp/vl/laserfarm)
 2. Meijer, C., Grootes, M. W., Koma, Z., Dzigan, Y., Gonçalves, R., Andela, B., van den Oord, G., Ranguelova, E., Renaud, N., and Kissling, W. D.: Laserchicken – A tool for distributed feature calculation from massive LiDAR point cloud datasets, SoftwareX, 12, 100626, 2020. <https://doi.org/10.1016/j.softx.2020.100626>.
 3. Shi, Y., Wang, J., and Kissling, W. D.: Multi-temporal high-resolution data products of ecosystem structure derived from country-wide airborne laser scanning surveys of the Netherlands, Earth Syst. Sci. Data, 17, 3641–3677, 2025. <https://doi.org/10.5194/essd-17-3641-2025>.
 
+## Useful links
 
+- [AHN viewer](https://www.ahn.nl/ahn-viewer)
+- [AHN point cloud viewer](https://www.ahn.nl/ahn-puntenwolkviewer-maak-3d-kennis-met-de-miljarden-metingen-van-het-ahn)
+- [Laserfarm](https://laserfarm.readthedocs.io/en/latest/index.html): [GitHub page](https://github.com/eEcoLiDAR/Laserfarm), [Publication](https://doi.org/10.1016/j.ecoinf.2022.101836)
+- [Laserchicken](https://laserchicken.readthedocs.io/en/latest/): [GitHub page](https://github.com/eEcoLiDAR/laserchicken), [Publication](https://doi.org/10.1016/j.softx.2020.100626)
+- [Multi-temporal LiDAR data products from the Netherlands on Zenodo repository](https://doi.org/10.5281/zenodo.13940847)
+- AHN3: [Data publication](https://doi.org/10.1016/j.dib.2022.108798), [Data repository](https://zenodo.org/records/13692080)
 
+## Contact
 
+[Yifang Shi](https://www.uva.nl/en/profile/s/h/y.shi/y.shi.html)\
+(<y.shi@uva.nl>)\
+[Biodiversity & Macroecology (BIOMAC) lab](https://www.biomac.org/1/home.html)\
+[Department Theoretical and Computational Ecology (TCE)](https://ibed.uva.nl/content/research-departments/theoretical-and-computational-ecology/theoretical-and-computational-ecology.html)\
+[Institute for Biodiversity and Ecosystem Dynamics (IBED)](https://ibed.uva.nl/)\
+[University of Amsterdam](https://www.uva.nl/en), The Netherlands
   
