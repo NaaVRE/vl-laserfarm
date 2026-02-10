@@ -1,10 +1,10 @@
 {
   "chart": {
     "offset": {
-      "x": -475.06,
-      "y": 127.74
+      "x": 343.9,
+      "y": -32.37
     },
-    "scale": 0.552,
+    "scale": 0.439,
     "nodes": {
       "b8f006cc-cd2a-4b28-ae8e-3e94f044a2aa": {
         "id": "b8f006cc-cd2a-4b28-ae8e-3e94f044a2aa",
@@ -23,8 +23,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 207.5,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
@@ -91,7 +91,7 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       },
       "eb57a963-dfae-487a-b787-d8b8f620d425": {
@@ -111,8 +111,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 44,
-              "y": 75
+              "x": -2,
+              "y": 30
             }
           },
           "tiles": {
@@ -123,8 +123,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 234.5,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
@@ -215,7 +215,7 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       },
       "f7dc769b-7bb4-4e45-a643-faca46cd4ae7": {
@@ -235,8 +235,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 42.5,
-              "y": 75
+              "x": -2,
+              "y": 30
             }
           },
           "split_laz_files": {
@@ -247,8 +247,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 206,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
@@ -315,7 +315,7 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       },
       "3357a349-1b42-4200-ad93-d49fb94db0b5": {
@@ -335,8 +335,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 15.5,
-              "y": 75
+              "x": -2,
+              "y": 30
             }
           },
           "unique_tiles": {
@@ -347,8 +347,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 210.5,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
@@ -388,7 +388,7 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       },
       "d6d29e97-2ff3-4ee8-9fd0-56911f25e249": {
@@ -409,7 +409,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "splitter_target": {
@@ -421,7 +421,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -451,7 +451,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "479689e9-b33e-4819-907c-54d9765e382b": {
@@ -472,7 +472,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "merger_target": {
@@ -484,7 +484,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -514,7 +514,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "73428ef2-4437-48b3-8d30-1d8c307a100a": {
@@ -535,7 +535,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "splitter_target": {
@@ -547,7 +547,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -577,7 +577,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "496c766e-4a23-49b7-9629-1e3920f324e5": {
@@ -598,7 +598,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "merger_target": {
@@ -610,7 +610,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -640,7 +640,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "df10aee6-bd99-4598-a3bb-6854d72e4c04": {
@@ -661,7 +661,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "merger_target": {
@@ -673,7 +673,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -703,7 +703,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "c1fd78b7-534b-4285-b07f-e2a3a98bb9b9": {
@@ -724,7 +724,7 @@
             },
             "position": {
               "x": -2,
-              "y": 50
+              "y": 30
             }
           },
           "splitter_target": {
@@ -736,7 +736,7 @@
             },
             "position": {
               "x": 202,
-              "y": 50
+              "y": 30
             }
           }
         },
@@ -766,7 +766,7 @@
         },
         "size": {
           "width": 202,
-          "height": 102
+          "height": 61
         }
       },
       "bd726879-7b3f-4663-a293-04c4968ac6c9": {
@@ -786,8 +786,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 39.5,
-              "y": 75
+              "x": -2,
+              "y": 30
             }
           },
           "feature_files": {
@@ -798,8 +798,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 209.5,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
@@ -915,140 +915,14 @@
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
         }
       },
-      "6e5e826d-84c6-4f86-add1-c558033a6d30": {
-        "id": "6e5e826d-84c6-4f86-add1-c558033a6d30",
+      "be0e7463-752b-4054-a00b-fa36a58a248a": {
+        "id": "be0e7463-752b-4054-a00b-fa36a58a248a",
         "position": {
-          "x": 3492.0168934697695,
-          "y": 665.3260869565207
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "geotiff_file_local": {
-            "id": "geotiff_file_local",
-            "type": "left",
-            "properties": {
-              "color": "#937a1f",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 53,
-              "y": 75
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/1fcfb7b6-8b3b-44aa-890e-693595d5420b/",
-            "owner": "gpelouze",
-            "virtual_lab": "laserfarm",
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-build:v0.0.8",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-runtime:v0.0.8"
-            },
-            "dependencies": [
-              {
-                "name": "Minio",
-                "module": "minio",
-                "asname": null
-              },
-              {
-                "name": "rasterio",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "os",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "matplotlib.pyplot",
-                "module": "",
-                "asname": "plt"
-              },
-              {
-                "name": "rasterio.plot",
-                "module": "",
-                "asname": "rp"
-              }
-            ],
-            "inputs": [
-              {
-                "name": "geotiff_file_local",
-                "type": "str"
-              }
-            ],
-            "outputs": [],
-            "confs": [
-              {
-                "name": "conf_local_path_figures",
-                "assignation": "conf_local_path_figures = os.path.join('/tmp/data', 'figures')"
-              },
-              {
-                "name": "conf_local_tmp",
-                "assignation": "conf_local_tmp = '/tmp/data'"
-              }
-            ],
-            "params": [
-              {
-                "name": "param_feature_name",
-                "type": "str",
-                "default_value": "perc_95_normalized_height"
-              },
-              {
-                "name": "param_minio_endpoint",
-                "type": "str",
-                "default_value": "scruffy.lab.uvalight.net:9000"
-              },
-              {
-                "name": "param_minio_public_dataset_prefix",
-                "type": "str",
-                "default_value": "vl-laserfarm/small_terschelling/ahn3/"
-              },
-              {
-                "name": "param_minio_user_bucket",
-                "type": "str",
-                "default_value": "naa-vre-user-data"
-              },
-              {
-                "name": "param_minio_user_prefix",
-                "type": "str",
-                "default_value": ""
-              }
-            ],
-            "secrets": [
-              {
-                "name": "secret_minio_access_key",
-                "type": "str"
-              },
-              {
-                "name": "secret_minio_secret_key",
-                "type": "str"
-              }
-            ],
-            "title": "s7-figures-gpelouze",
-            "description": "s7-figures-gpelouze",
-            "created": "2025-06-14T15:15:28.321027Z",
-            "modified": "2025-06-15T09:29:15.912506Z",
-            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s7-figures-gpelouze:6be9dcb",
-            "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/c6d04694c5c54459acbaa8f5c7cd4e9cd0e303de/s7-figures-gpelouze"
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 152
-        }
-      },
-      "43fff144-5772-4d47-9bb1-a89a74180d6a": {
-        "id": "43fff144-5772-4d47-9bb1-a89a74180d6a",
-        "position": {
-          "x": 3155.060371730638,
-          "y": 663.5144927536237
+          "x": 3152.055503619593,
+          "y": 704.4140197152244
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -1061,8 +935,8 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 40.5,
-              "y": 75
+              "x": -2,
+              "y": 30
             }
           },
           "geotiff_file_local": {
@@ -1073,34 +947,36 @@
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": 197,
-              "y": 75
+              "x": 252,
+              "y": 30
             }
           }
         },
         "properties": {
           "cell": {
-            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/09c09cb3-6d81-451f-9990-aa479c1552a5/",
-            "owner": "gpelouze",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/b373be35-e710-4786-844a-c0ef9d38f856/",
+            "owner": "koen.greuell@lifewatch.eu",
             "virtual_lab": "laserfarm",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
             "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.0.8",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.0.8"
+              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.1.6",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.1.6"
             },
             "dependencies": [
               {
-                "name": "Minio",
-                "module": "minio",
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "shutil",
+                "module": "",
                 "asname": null
               },
               {
                 "name": "GeotiffWriter",
                 "module": "laserfarm",
-                "asname": null
-              },
-              {
-                "name": "os",
-                "module": "",
                 "asname": null
               }
             ],
@@ -1126,8 +1002,8 @@
                 "assignation": "conf_local_path_geotiff = os.path.join('/tmp/data', 'geotiff')"
               },
               {
-                "name": "conf_local_tmp",
-                "assignation": "conf_local_tmp = '/tmp/data'"
+                "name": "conf_cloud_storage_path_geotiff",
+                "assignation": "conf_cloud_storage_path_geotiff = os.path.join('/home/jovyan/Cloud Storage/naa-vre-user-data/', 'geotiff')"
               }
             ],
             "params": [
@@ -1135,50 +1011,122 @@
                 "name": "param_feature_name",
                 "type": "str",
                 "default_value": "perc_95_normalized_height"
-              },
-              {
-                "name": "param_minio_endpoint",
-                "type": "str",
-                "default_value": "scruffy.lab.uvalight.net:9000"
-              },
-              {
-                "name": "param_minio_public_dataset_prefix",
-                "type": "str",
-                "default_value": "vl-laserfarm/small_terschelling/ahn3/"
-              },
-              {
-                "name": "param_minio_user_bucket",
-                "type": "str",
-                "default_value": "naa-vre-user-data"
-              },
-              {
-                "name": "param_minio_user_prefix",
-                "type": "str",
-                "default_value": ""
               }
             ],
-            "secrets": [
-              {
-                "name": "secret_minio_access_key",
-                "type": "str"
-              },
-              {
-                "name": "secret_minio_secret_key",
-                "type": "str"
-              }
-            ],
-            "title": "s6-save-geotiff-gpelouze",
-            "description": "s6-save-geotiff-gpelouze",
-            "created": "2025-06-14T15:14:48.339736Z",
-            "modified": "2025-06-15T09:34:54.627150Z",
-            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s6-save-geotiff-gpelouze:7209b1e",
+            "secrets": [],
+            "title": "s6-save-geotiff-koen-greuell-lifewatch-eu",
+            "description": "s6-save-geotiff-koen-greuell-lifewatch-eu",
+            "created": "2026-02-09T10:27:21.172236Z",
+            "modified": "2026-02-09T10:27:21.434801Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s6-save-geotiff-koen-greuell-lifewatch-eu:2738a5a",
             "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/5dcc79c5fa9af58c79c53e2bce9076007277bc0d/s6-save-geotiff-gpelouze"
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/a17c03e2c3d0e5d7ef0bb23865f59310cccb9fa4/s6-save-geotiff-koen-greuell-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
           }
         },
         "size": {
           "width": 252,
-          "height": 152
+          "height": 61
+        }
+      },
+      "6e6e96d0-7b11-44d4-bec1-a1362de96fda": {
+        "id": "6e6e96d0-7b11-44d4-bec1-a1362de96fda",
+        "position": {
+          "x": 3450.037983609767,
+          "y": 718.3826879271074
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "geotiff_file_local": {
+            "id": "geotiff_file_local",
+            "type": "left",
+            "properties": {
+              "color": "#937a1f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/a4dfdbd2-96fc-43ac-a61e-06c9aa6252c7/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "laserfarm",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-build:v0.1.6",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-runtime:v0.1.6"
+            },
+            "dependencies": [
+              {
+                "name": "rasterio",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "matplotlib.pyplot",
+                "module": "",
+                "asname": "plt"
+              },
+              {
+                "name": "rasterio.plot",
+                "module": "",
+                "asname": "rp"
+              },
+              {
+                "name": "Path",
+                "module": "pathlib",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "geotiff_file_local",
+                "type": "str"
+              }
+            ],
+            "outputs": [],
+            "confs": [
+              {
+                "name": "conf_cloud_storage_path_figures",
+                "assignation": "conf_cloud_storage_path_figures = os.path.join('/home/jovyan/Cloud Storage/naa-vre-user-data/', 'figures')"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_feature_name",
+                "type": "str",
+                "default_value": "perc_95_normalized_height"
+              }
+            ],
+            "secrets": [],
+            "title": "s7-figures-koen-greuell-lifewatch-eu",
+            "description": "s7-figures-koen-greuell-lifewatch-eu",
+            "created": "2026-02-09T11:53:55.273631Z",
+            "modified": "2026-02-09T11:53:55.631543Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s7-figures-koen-greuell-lifewatch-eu:e069852",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/eb0c8d4a1d42d4217397007ea904564a15705e22/s7-figures-koen-greuell-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
         }
       }
     },
@@ -1293,25 +1241,25 @@
           "portId": "merger_source"
         }
       },
-      "a7abd5ce-d11b-4c69-89b3-9d15fa65f6d5": {
-        "id": "a7abd5ce-d11b-4c69-89b3-9d15fa65f6d5",
+      "5e1f1b4f-e4a8-43f5-ae9e-5747b4d4b20e": {
+        "id": "5e1f1b4f-e4a8-43f5-ae9e-5747b4d4b20e",
         "from": {
           "nodeId": "496c766e-4a23-49b7-9629-1e3920f324e5",
           "portId": "merger_target"
         },
         "to": {
-          "nodeId": "43fff144-5772-4d47-9bb1-a89a74180d6a",
+          "nodeId": "be0e7463-752b-4054-a00b-fa36a58a248a",
           "portId": "feature_files"
         }
       },
-      "a4d131b4-0928-435d-b0c2-6ed89986d425": {
-        "id": "a4d131b4-0928-435d-b0c2-6ed89986d425",
+      "786cf7dd-ad33-4339-9394-84e5875316e9": {
+        "id": "786cf7dd-ad33-4339-9394-84e5875316e9",
         "from": {
-          "nodeId": "43fff144-5772-4d47-9bb1-a89a74180d6a",
+          "nodeId": "be0e7463-752b-4054-a00b-fa36a58a248a",
           "portId": "geotiff_file_local"
         },
         "to": {
-          "nodeId": "6e5e826d-84c6-4f86-add1-c558033a6d30",
+          "nodeId": "6e6e96d0-7b11-44d4-bec1-a1362de96fda",
           "portId": "geotiff_file_local"
         }
       }
