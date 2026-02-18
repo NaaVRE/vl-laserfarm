@@ -27,7 +27,7 @@ This Virtual Lab allows users to easily generate vegetation structural propertie
 
 ## Tutorial
 
-A tutorial is available in [NaaVRE](https://beta.naavre.net/vreapp/vl/laserfarm) in [vl_laserfarm/Documentation](https://github.com/NaaVRE/vl-laserfarm/blob/main/Laserfarm.ipynb) (need to be updated)
+A tutorial is available in [NaaVRE](https://beta.naavre.net/vreapp/vl/laserfarm) in [LiDAR_Vlab_tutorial.ipynb](./LiDAR_Vlab_tutorial.ipynb).
 
 
 ## Laserfarm
