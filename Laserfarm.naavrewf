@@ -1,328 +1,16 @@
 {
   "chart": {
     "offset": {
-      "x": 343.9,
-      "y": -32.37
+      "x": 340.51,
+      "y": -411.68
     },
-    "scale": 0.439,
+    "scale": 0.784,
     "nodes": {
-      "b8f006cc-cd2a-4b28-ae8e-3e94f044a2aa": {
-        "id": "b8f006cc-cd2a-4b28-ae8e-3e94f044a2aa",
-        "position": {
-          "x": 0,
-          "y": 658.7655601882815
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "raw_laz_files": {
-            "id": "raw_laz_files",
-            "type": "right",
-            "properties": {
-              "color": "#1f9331",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 30
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/729aba13-c583-4c5e-8db2-c22459625565/",
-            "owner": "gpelouze",
-            "virtual_lab": "laserfarm",
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-build:v0.0.8",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-vanilla-cell-runtime:v0.0.8"
-            },
-            "dependencies": [
-              {
-                "name": "Minio",
-                "module": "minio",
-                "asname": null
-              },
-              {
-                "name": "os",
-                "module": "",
-                "asname": null
-              }
-            ],
-            "inputs": [],
-            "outputs": [
-              {
-                "name": "raw_laz_files",
-                "type": "list"
-              }
-            ],
-            "confs": [
-              {
-                "name": "conf_local_path_raw",
-                "assignation": "conf_local_path_raw = os.path.join('/tmp/data', 'raw')"
-              }
-            ],
-            "params": [
-              {
-                "name": "param_minio_endpoint",
-                "type": "str",
-                "default_value": "scruffy.lab.uvalight.net:9000"
-              },
-              {
-                "name": "param_minio_public_bucket",
-                "type": "str",
-                "default_value": "naa-vre-public"
-              },
-              {
-                "name": "param_minio_public_dataset_prefix",
-                "type": "str",
-                "default_value": "vl-laserfarm/small_terschelling/ahn3/"
-              }
-            ],
-            "secrets": [],
-            "title": "s1-fetch-laz-files-gpelouze",
-            "description": "s1-fetch-laz-files-gpelouze",
-            "created": "2025-06-14T15:10:43.850965Z",
-            "modified": "2025-06-14T15:10:44.042182Z",
-            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s1-fetch-laz-files-gpelouze:8a51418",
-            "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/ce23c5f3274540b44adfd793a551f768ce1b7e8e/s1-fetch-laz-files-gpelouze"
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 61
-        }
-      },
-      "eb57a963-dfae-487a-b787-d8b8f620d425": {
-        "id": "eb57a963-dfae-487a-b787-d8b8f620d425",
-        "position": {
-          "x": 1466.0554734530642,
-          "y": 664.9902311950508
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "split_laz_files": {
-            "id": "split_laz_files",
-            "type": "left",
-            "properties": {
-              "color": "#8bd22d",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 30
-            }
-          },
-          "tiles": {
-            "id": "tiles",
-            "type": "right",
-            "properties": {
-              "color": "#82bf40",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 30
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/517838eb-eae4-490c-9da8-6254a4dae9e4/",
-            "owner": "gpelouze",
-            "virtual_lab": "laserfarm",
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.0.8",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.0.8"
-            },
-            "dependencies": [
-              {
-                "name": "os",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "json",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "Retiler",
-                "module": "laserfarm",
-                "asname": null
-              }
-            ],
-            "inputs": [
-              {
-                "name": "split_laz_files",
-                "type": "list"
-              }
-            ],
-            "outputs": [
-              {
-                "name": "tiles",
-                "type": "list"
-              }
-            ],
-            "confs": [
-              {
-                "name": "conf_local_path_split",
-                "assignation": "conf_local_path_split = os.path.join('/tmp/data', 'split')"
-              },
-              {
-                "name": "conf_local_path_retiled",
-                "assignation": "conf_local_path_retiled = os.path.join('/tmp/data', 'retiled')"
-              }
-            ],
-            "params": [
-              {
-                "name": "param_max_x",
-                "type": "str",
-                "default_value": "398892.19"
-              },
-              {
-                "name": "param_max_y",
-                "type": "str",
-                "default_value": "726783.87"
-              },
-              {
-                "name": "param_min_x",
-                "type": "str",
-                "default_value": "-113107.81"
-              },
-              {
-                "name": "param_min_y",
-                "type": "str",
-                "default_value": "214783.87"
-              },
-              {
-                "name": "param_n_tiles_side",
-                "type": "str",
-                "default_value": "512"
-              }
-            ],
-            "secrets": [],
-            "title": "s3-retile-laz-files-gpelouze",
-            "description": "s3-retile-laz-files-gpelouze",
-            "created": "2025-06-14T15:12:55.881923Z",
-            "modified": "2025-06-14T15:12:56.093905Z",
-            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s3-retile-laz-files-gpelouze:75a378d",
-            "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/e7cde01b14a3e6f233b96ab74e9632e250797115/s3-retile-laz-files-gpelouze"
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 61
-        }
-      },
-      "f7dc769b-7bb4-4e45-a643-faca46cd4ae7": {
-        "id": "f7dc769b-7bb4-4e45-a643-faca46cd4ae7",
-        "position": {
-          "x": 603.5564160980889,
-          "y": 661.129650137226
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "raw_laz_files": {
-            "id": "raw_laz_files",
-            "type": "left",
-            "properties": {
-              "color": "#1f9331",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 30
-            }
-          },
-          "split_laz_files": {
-            "id": "split_laz_files",
-            "type": "right",
-            "properties": {
-              "color": "#8bd22d",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 30
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://new.demo.naavre.net/naavre-catalogue-service/workflow-cells/325ae92b-359e-478f-9459-130d0d27d8ae/",
-            "owner": "gpelouze",
-            "virtual_lab": "laserfarm",
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.0.8",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.0.8"
-            },
-            "dependencies": [
-              {
-                "name": "os",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "laspy",
-                "module": "",
-                "asname": null
-              }
-            ],
-            "inputs": [
-              {
-                "name": "raw_laz_files",
-                "type": "list"
-              }
-            ],
-            "outputs": [
-              {
-                "name": "split_laz_files",
-                "type": "list"
-              }
-            ],
-            "confs": [
-              {
-                "name": "conf_local_path_split",
-                "assignation": "conf_local_path_split = os.path.join('/tmp/data', 'split')"
-              }
-            ],
-            "params": [
-              {
-                "name": "param_laz_compression_factor",
-                "type": "str",
-                "default_value": "7"
-              },
-              {
-                "name": "param_max_filesize_mb",
-                "type": "str",
-                "default_value": "80"
-              }
-            ],
-            "secrets": [],
-            "title": "s2-split-big-laz-gpelouze",
-            "description": "s2-split-big-laz-gpelouze",
-            "created": "2025-06-14T15:13:26.185089Z",
-            "modified": "2025-06-14T15:27:27.712528Z",
-            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s2-split-big-laz-gpelouze:a23a978",
-            "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/717a54a30ce3a7879c69892c6eaa0a32b221a92b/s2-split-big-laz-gpelouze"
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 61
-        }
-      },
       "3357a349-1b42-4200-ad93-d49fb94db0b5": {
         "id": "3357a349-1b42-4200-ad93-d49fb94db0b5",
         "position": {
-          "x": 2025.6707459207464,
-          "y": 666.303807303807
+          "x": 571.5046287468975,
+          "y": 668.3084548954357
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -391,137 +79,11 @@
           "height": 61
         }
       },
-      "d6d29e97-2ff3-4ee8-9fd0-56911f25e249": {
-        "id": "d6d29e97-2ff3-4ee8-9fd0-56911f25e249",
-        "position": {
-          "x": 344.25486167407433,
-          "y": 686.7971887550204
-        },
-        "orientation": 0,
-        "type": "splitter",
-        "ports": {
-          "splitter_source": {
-            "id": "splitter_source",
-            "type": "left",
-            "properties": {
-              "color": "#86642d",
-              "parentNodeType": "splitter"
-            },
-            "position": {
-              "x": -2,
-              "y": 30
-            }
-          },
-          "splitter_target": {
-            "id": "splitter_target",
-            "type": "right",
-            "properties": {
-              "color": "#5940bf",
-              "parentNodeType": "splitter"
-            },
-            "position": {
-              "x": 202,
-              "y": 30
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "id": "splitter",
-            "title": "Splitter",
-            "type": "splitter",
-            "container_image": "",
-            "dependencies": [],
-            "inputs": [
-              {
-                "name": "splitter_source",
-                "type": "list"
-              }
-            ],
-            "outputs": [
-              {
-                "name": "splitter_target",
-                "type": "list"
-              }
-            ],
-            "confs": [],
-            "params": [],
-            "secrets": []
-          }
-        },
-        "size": {
-          "width": 202,
-          "height": 61
-        }
-      },
-      "479689e9-b33e-4819-907c-54d9765e382b": {
-        "id": "479689e9-b33e-4819-907c-54d9765e382b",
-        "position": {
-          "x": 1770.1262626262635,
-          "y": 680.3787878787882
-        },
-        "orientation": 0,
-        "type": "merger",
-        "ports": {
-          "merger_source": {
-            "id": "merger_source",
-            "type": "left",
-            "properties": {
-              "color": "#1f9384",
-              "parentNodeType": "merger"
-            },
-            "position": {
-              "x": -2,
-              "y": 30
-            }
-          },
-          "merger_target": {
-            "id": "merger_target",
-            "type": "right",
-            "properties": {
-              "color": "#562d86",
-              "parentNodeType": "merger"
-            },
-            "position": {
-              "x": 202,
-              "y": 30
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "id": "merger",
-            "title": "Merger",
-            "type": "merger",
-            "container_image": "",
-            "dependencies": [],
-            "inputs": [
-              {
-                "name": "merger_source",
-                "type": "list"
-              }
-            ],
-            "outputs": [
-              {
-                "name": "merger_target",
-                "type": "list"
-              }
-            ],
-            "confs": [],
-            "params": [],
-            "secrets": []
-          }
-        },
-        "size": {
-          "width": 202,
-          "height": 61
-        }
-      },
       "73428ef2-4437-48b3-8d30-1d8c307a100a": {
         "id": "73428ef2-4437-48b3-8d30-1d8c307a100a",
         "position": {
-          "x": 2317.5178571428546,
-          "y": 682.9285714285705
+          "x": 859.1254533315722,
+          "y": 671.0038904091516
         },
         "orientation": 0,
         "type": "splitter",
@@ -583,8 +145,8 @@
       "496c766e-4a23-49b7-9629-1e3920f324e5": {
         "id": "496c766e-4a23-49b7-9629-1e3920f324e5",
         "position": {
-          "x": 2882.1504367934194,
-          "y": 685.1639260020545
+          "x": 296.72010149290264,
+          "y": 979.0216952810099
         },
         "orientation": 0,
         "type": "merger",
@@ -630,132 +192,6 @@
             "outputs": [
               {
                 "name": "merger_target",
-                "type": "list"
-              }
-            ],
-            "confs": [],
-            "params": [],
-            "secrets": []
-          }
-        },
-        "size": {
-          "width": 202,
-          "height": 61
-        }
-      },
-      "df10aee6-bd99-4598-a3bb-6854d72e4c04": {
-        "id": "df10aee6-bd99-4598-a3bb-6854d72e4c04",
-        "position": {
-          "x": 926.9697481580109,
-          "y": 687.1716589575561
-        },
-        "orientation": 0,
-        "type": "merger",
-        "ports": {
-          "merger_source": {
-            "id": "merger_source",
-            "type": "left",
-            "properties": {
-              "color": "#1f9384",
-              "parentNodeType": "merger"
-            },
-            "position": {
-              "x": -2,
-              "y": 30
-            }
-          },
-          "merger_target": {
-            "id": "merger_target",
-            "type": "right",
-            "properties": {
-              "color": "#562d86",
-              "parentNodeType": "merger"
-            },
-            "position": {
-              "x": 202,
-              "y": 30
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "id": "merger",
-            "title": "Merger",
-            "type": "merger",
-            "container_image": "",
-            "dependencies": [],
-            "inputs": [
-              {
-                "name": "merger_source",
-                "type": "list"
-              }
-            ],
-            "outputs": [
-              {
-                "name": "merger_target",
-                "type": "list"
-              }
-            ],
-            "confs": [],
-            "params": [],
-            "secrets": []
-          }
-        },
-        "size": {
-          "width": 202,
-          "height": 61
-        }
-      },
-      "c1fd78b7-534b-4285-b07f-e2a3a98bb9b9": {
-        "id": "c1fd78b7-534b-4285-b07f-e2a3a98bb9b9",
-        "position": {
-          "x": 1200.493300277725,
-          "y": 688.3739821241375
-        },
-        "orientation": 0,
-        "type": "splitter",
-        "ports": {
-          "splitter_source": {
-            "id": "splitter_source",
-            "type": "left",
-            "properties": {
-              "color": "#86642d",
-              "parentNodeType": "splitter"
-            },
-            "position": {
-              "x": -2,
-              "y": 30
-            }
-          },
-          "splitter_target": {
-            "id": "splitter_target",
-            "type": "right",
-            "properties": {
-              "color": "#5940bf",
-              "parentNodeType": "splitter"
-            },
-            "position": {
-              "x": 202,
-              "y": 30
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "id": "splitter",
-            "title": "Splitter",
-            "type": "splitter",
-            "container_image": "",
-            "dependencies": [],
-            "inputs": [
-              {
-                "name": "splitter_source",
-                "type": "list"
-              }
-            ],
-            "outputs": [
-              {
-                "name": "splitter_target",
                 "type": "list"
               }
             ],
@@ -772,8 +208,8 @@
       "bd726879-7b3f-4663-a293-04c4968ac6c9": {
         "id": "bd726879-7b3f-4663-a293-04c4968ac6c9",
         "position": {
-          "x": 2570.287769784174,
-          "y": 660.2158273381297
+          "x": 1.7770052198670752,
+          "y": 975.7552094884055
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -921,8 +357,8 @@
       "be0e7463-752b-4054-a00b-fa36a58a248a": {
         "id": "be0e7463-752b-4054-a00b-fa36a58a248a",
         "position": {
-          "x": 3152.055503619593,
-          "y": 704.4140197152244
+          "x": 534.9105034547447,
+          "y": 984.9232347097848
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -1034,8 +470,8 @@
       "6e6e96d0-7b11-44d4-bec1-a1362de96fda": {
         "id": "6e6e96d0-7b11-44d4-bec1-a1362de96fda",
         "position": {
-          "x": 3450.037983609767,
-          "y": 718.3826879271074
+          "x": 828.6419696306697,
+          "y": 987.2433420433593
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -1128,53 +564,247 @@
           "width": 252,
           "height": 61
         }
+      },
+      "7ca6cf2a-b15c-4f61-b1b7-b52a9075b66d": {
+        "id": "7ca6cf2a-b15c-4f61-b1b7-b52a9075b66d",
+        "position": {
+          "x": 289.7619255221626,
+          "y": 669.2346938775511
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "laz_files": {
+            "id": "laz_files",
+            "type": "left",
+            "properties": {
+              "color": "#79a9d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          },
+          "tiles": {
+            "id": "tiles",
+            "type": "right",
+            "properties": {
+              "color": "#82bf40",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/25e2bdb9-2226-4a40-a4d2-ec61f00abceb/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "laserfarm",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.1.9",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.1.9"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "json",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "Retiler",
+                "module": "laserfarm",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "laz_files",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "tiles",
+                "type": "list"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_local_path_split",
+                "assignation": "conf_local_path_split = os.path.join('/tmp/data', 'split')"
+              },
+              {
+                "name": "conf_local_path_retiled",
+                "assignation": "conf_local_path_retiled = os.path.join('/tmp/data', 'retiled')"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_max_x",
+                "type": "str",
+                "default_value": "398892.19"
+              },
+              {
+                "name": "param_max_y",
+                "type": "str",
+                "default_value": "726783.87"
+              },
+              {
+                "name": "param_min_x",
+                "type": "str",
+                "default_value": "-113107.81"
+              },
+              {
+                "name": "param_min_y",
+                "type": "str",
+                "default_value": "214783.87"
+              },
+              {
+                "name": "param_n_tiles_side",
+                "type": "str",
+                "default_value": "512"
+              }
+            ],
+            "secrets": [],
+            "title": "s3-retile-laz-files-koen-greuell-lifewatch-eu",
+            "description": "s3-retile-laz-files-koen-greuell-lifewatch-eu",
+            "created": "2026-03-02T10:50:41.487751Z",
+            "modified": "2026-03-02T10:50:41.869436Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s3-retile-laz-files-koen-greuell-lifewatch-eu:f5cff5b",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/61eba5a9be1a0b7c031b269ffa2269b71a6ce73f/s3-retile-laz-files-koen-greuell-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "e81ab7aa-784d-4f08-835e-4f6620cf2608": {
+        "id": "e81ab7aa-784d-4f08-835e-4f6620cf2608",
+        "position": {
+          "x": 0,
+          "y": 657.7551020408159
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "laz_files": {
+            "id": "laz_files",
+            "type": "right",
+            "properties": {
+              "color": "#79a9d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 17
+            }
+          },
+          "raw_laz_files": {
+            "id": "raw_laz_files",
+            "type": "right",
+            "properties": {
+              "color": "#1f9331",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 43
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/f321e4b3-6f9c-4137-89fe-2f3f5535d3ee/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "laserfarm",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.1.9",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.1.9"
+            },
+            "dependencies": [
+              {
+                "name": "Minio",
+                "module": "minio",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "laz_files",
+                "type": "list"
+              },
+              {
+                "name": "raw_laz_files",
+                "type": "list"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_local_path_raw",
+                "assignation": "conf_local_path_raw = os.path.join('/tmp/data', 'raw')"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_minio_endpoint",
+                "type": "str",
+                "default_value": "scruffy.lab.uvalight.net:9000"
+              },
+              {
+                "name": "param_minio_public_bucket",
+                "type": "str",
+                "default_value": "naa-vre-public"
+              },
+              {
+                "name": "param_minio_public_dataset_prefix",
+                "type": "str",
+                "default_value": "vl-laserfarm/small_terschelling/ahn3/"
+              }
+            ],
+            "secrets": [],
+            "title": "s1-fetch-laz-files-koen-greuell-lifewatch-eu",
+            "description": "s1-fetch-laz-files-koen-greuell-lifewatch-eu",
+            "created": "2026-03-02T10:56:11.818303Z",
+            "modified": "2026-03-02T10:56:12.189708Z",
+            "version": 4,
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s1-fetch-laz-files-koen-greuell-lifewatch-eu:1df9be8",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/100efbf40af524aee58beb8c1c6ce6fc28b94eee/s1-fetch-laz-files-koen-greuell-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
       }
     },
     "links": {
-      "048b64ba-264c-431d-a8bb-ce91fd77ff95": {
-        "id": "048b64ba-264c-431d-a8bb-ce91fd77ff95",
-        "from": {
-          "nodeId": "b8f006cc-cd2a-4b28-ae8e-3e94f044a2aa",
-          "portId": "raw_laz_files"
-        },
-        "to": {
-          "nodeId": "d6d29e97-2ff3-4ee8-9fd0-56911f25e249",
-          "portId": "splitter_source"
-        }
-      },
-      "2e539c1d-4278-451f-b208-2e77fc315159": {
-        "id": "2e539c1d-4278-451f-b208-2e77fc315159",
-        "from": {
-          "nodeId": "d6d29e97-2ff3-4ee8-9fd0-56911f25e249",
-          "portId": "splitter_target"
-        },
-        "to": {
-          "nodeId": "f7dc769b-7bb4-4e45-a643-faca46cd4ae7",
-          "portId": "raw_laz_files"
-        }
-      },
-      "9a9881a2-f9da-417d-89a1-240b0f774445": {
-        "id": "9a9881a2-f9da-417d-89a1-240b0f774445",
-        "from": {
-          "nodeId": "eb57a963-dfae-487a-b787-d8b8f620d425",
-          "portId": "tiles"
-        },
-        "to": {
-          "nodeId": "479689e9-b33e-4819-907c-54d9765e382b",
-          "portId": "merger_source"
-        }
-      },
-      "904b06b0-fa7a-48ee-98da-fd9a8db03e97": {
-        "id": "904b06b0-fa7a-48ee-98da-fd9a8db03e97",
-        "from": {
-          "nodeId": "479689e9-b33e-4819-907c-54d9765e382b",
-          "portId": "merger_target"
-        },
-        "to": {
-          "nodeId": "3357a349-1b42-4200-ad93-d49fb94db0b5",
-          "portId": "tiles"
-        }
-      },
       "90f0e71c-1f6a-4d84-93a3-9c93c81cc10f": {
         "id": "90f0e71c-1f6a-4d84-93a3-9c93c81cc10f",
         "from": {
@@ -1184,39 +814,6 @@
         "to": {
           "nodeId": "73428ef2-4437-48b3-8d30-1d8c307a100a",
           "portId": "splitter_source"
-        }
-      },
-      "2643d171-ab06-49e4-9889-c2fe89a76b61": {
-        "id": "2643d171-ab06-49e4-9889-c2fe89a76b61",
-        "from": {
-          "nodeId": "f7dc769b-7bb4-4e45-a643-faca46cd4ae7",
-          "portId": "split_laz_files"
-        },
-        "to": {
-          "nodeId": "df10aee6-bd99-4598-a3bb-6854d72e4c04",
-          "portId": "merger_source"
-        }
-      },
-      "671da279-715c-44d3-a463-92af4d5ea865": {
-        "id": "671da279-715c-44d3-a463-92af4d5ea865",
-        "from": {
-          "nodeId": "df10aee6-bd99-4598-a3bb-6854d72e4c04",
-          "portId": "merger_target"
-        },
-        "to": {
-          "nodeId": "c1fd78b7-534b-4285-b07f-e2a3a98bb9b9",
-          "portId": "splitter_source"
-        }
-      },
-      "aa321da9-b413-44a5-9937-af24f93b76b4": {
-        "id": "aa321da9-b413-44a5-9937-af24f93b76b4",
-        "from": {
-          "nodeId": "c1fd78b7-534b-4285-b07f-e2a3a98bb9b9",
-          "portId": "splitter_target"
-        },
-        "to": {
-          "nodeId": "eb57a963-dfae-487a-b787-d8b8f620d425",
-          "portId": "split_laz_files"
         }
       },
       "56b3344d-3b5f-4968-a4ef-547783df13f8": {
@@ -1261,6 +858,28 @@
         "to": {
           "nodeId": "6e6e96d0-7b11-44d4-bec1-a1362de96fda",
           "portId": "geotiff_file_local"
+        }
+      },
+      "0c53bcd6-f7bf-4a56-b0b5-1f3816eab712": {
+        "id": "0c53bcd6-f7bf-4a56-b0b5-1f3816eab712",
+        "from": {
+          "nodeId": "7ca6cf2a-b15c-4f61-b1b7-b52a9075b66d",
+          "portId": "tiles"
+        },
+        "to": {
+          "nodeId": "3357a349-1b42-4200-ad93-d49fb94db0b5",
+          "portId": "tiles"
+        }
+      },
+      "2028a22f-f0f9-4a57-93be-eddeabed6786": {
+        "id": "2028a22f-f0f9-4a57-93be-eddeabed6786",
+        "from": {
+          "nodeId": "e81ab7aa-784d-4f08-835e-4f6620cf2608",
+          "portId": "laz_files"
+        },
+        "to": {
+          "nodeId": "7ca6cf2a-b15c-4f61-b1b7-b52a9075b66d",
+          "portId": "laz_files"
         }
       }
     },
