@@ -1,5 +1,7 @@
 # Virtual Lab for LiDAR Point Cloud Analysis using Laserfarm Workflow
 
+<img src="documentation/images/laserfarm-v2.svg" align="right" width="200">
+
 Quantifying ecosystem structure is essential for sustainable forest management, species distribution research, dynamic ecosystem modelling, and biodiversity monitoring. Recent years have seen a rapid surge in the use of light detection and ranging (LiDAR) technology for characterizing the structure of ecosystems. Yet, a key bottleneck is the availability of free and open-source tools that allow a standardized processing of large amounts of LiDAR point clouds in an efficient and distributed way. Here, we integrate a high-throughput workflow called "Laserfarm" into NaaVRE, enabling the efficient, scalable, and distributed processing of LiDAR point clouds from national and regional airborne laser scanning (ALS) surveys into geospatial data products of ecosystem structure. 
 
 ## Description
