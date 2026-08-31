@@ -1,10 +1,10 @@
 {
   "chart": {
     "offset": {
-      "x": 174.73,
-      "y": 19.66
+      "x": 201.31,
+      "y": -8.86
     },
-    "scale": 0.923,
+    "scale": 0.823,
     "nodes": {
       "614407f3-f2a0-4c78-a2be-2bdc3882b0ee": {
         "id": "614407f3-f2a0-4c78-a2be-2bdc3882b0ee",
@@ -869,368 +869,6 @@
           "height": 61
         }
       },
-      "b6de6d8b-6ea4-45a4-974b-4a21c1f57356": {
-        "id": "b6de6d8b-6ea4-45a4-974b-4a21c1f57356",
-        "position": {
-          "x": 1250.523182432979,
-          "y": 813.19669250646
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "feature_extraction_completed": {
-            "id": "feature_extraction_completed",
-            "type": "left",
-            "properties": {
-              "color": "#ac538b",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 17
-            }
-          },
-          "features": {
-            "id": "features",
-            "type": "left",
-            "properties": {
-              "color": "#ac5369",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 43
-            }
-          },
-          "geotiff_features": {
-            "id": "geotiff_features",
-            "type": "right",
-            "properties": {
-              "color": "#53a5ac",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 30
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/758f27b4-7357-4ba6-ac40-e98f05deb473/",
-            "owner": "koen.greuell@lifewatch.eu",
-            "virtual_lab": "laserfarm",
-            "shared_with_scopes": [],
-            "shared_with_users": [],
-            "versions": [
-              {
-                "version": 4,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/b940df61-f317-48ff-82df-2a4167212c1d/"
-              },
-              {
-                "version": 5,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/024447c1-38c8-4eae-a6d2-b851e042bb7e/"
-              },
-              {
-                "version": 6,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/84f27db0-64c9-4b99-85e5-58e8291e7c9e/"
-              },
-              {
-                "version": 7,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/90b0335c-b149-4fe8-bb76-6dd8e165c6f5/"
-              },
-              {
-                "version": 8,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/13441e46-8e4c-4618-88fd-6efba88ad08d/"
-              },
-              {
-                "version": 9,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/262439da-f756-4c7b-8285-206e00907b27/"
-              },
-              {
-                "version": 10,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/758f27b4-7357-4ba6-ac40-e98f05deb473/"
-              }
-            ],
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.3.13",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.3.13"
-            },
-            "dependencies": [
-              {
-                "name": "Path",
-                "module": "pathlib",
-                "asname": null
-              },
-              {
-                "name": "GeotiffWriter",
-                "module": "laserfarm",
-                "asname": null
-              }
-            ],
-            "inputs": [
-              {
-                "name": "feature_extraction_completed",
-                "type": "list"
-              },
-              {
-                "name": "features",
-                "type": "list"
-              }
-            ],
-            "outputs": [
-              {
-                "name": "geotiff_features",
-                "type": "list"
-              }
-            ],
-            "confs": [
-              {
-                "name": "conf_geotiff",
-                "assignation": "conf_geotiff = 'geotiff/'"
-              },
-              {
-                "name": "conf_targets",
-                "assignation": "conf_targets = 'targets/'"
-              }
-            ],
-            "params": [
-              {
-                "name": "param_intermediate_folder",
-                "type": "str",
-                "default_value": "/home/jovyan/Cloud Storage/naa-vre-laserfarm/"
-              },
-              {
-                "name": "param_output_storage",
-                "type": "str",
-                "default_value": "/home/jovyan/Cloud Storage/naa-vre-laserfarm/"
-              },
-              {
-                "name": "param_run_name",
-                "type": "str",
-                "default_value": "f'{param_input_data_folder}_{param_ahn_version}'"
-              }
-            ],
-            "secrets": [],
-            "title": "s6-save-geotiff-koen-greuell-lifewatch-eu",
-            "description": "s6-save-geotiff-koen-greuell-lifewatch-eu",
-            "created": "2026-08-03T08:48:31.777931Z",
-            "modified": "2026-08-03T08:48:32.614174Z",
-            "version": 10,
-            "template_format": "v1",
-            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s6-save-geotiff-koen-greuell-lifewatch-eu:b333ed2",
-            "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/5b28bdc2b85f84e7427ce14f7e6a1b69f7f2816d/s6-save-geotiff-koen-greuell-lifewatch-eu",
-            "is_draft": false
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 61
-        }
-      },
-      "de5bdf7a-ca8b-4f06-a4e2-746c9b33cc34": {
-        "id": "de5bdf7a-ca8b-4f06-a4e2-746c9b33cc34",
-        "position": {
-          "x": 703.505094577681,
-          "y": 771.9667183462534
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "shuffled_tiles": {
-            "id": "shuffled_tiles",
-            "type": "left",
-            "properties": {
-              "color": "#bb79d2",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 30
-            }
-          },
-          "feature_extraction_completed": {
-            "id": "feature_extraction_completed",
-            "type": "right",
-            "properties": {
-              "color": "#ac538b",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 30
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/0d983922-7f64-478b-a7dd-f50dbf969f8f/",
-            "owner": "koen.greuell@lifewatch.eu",
-            "virtual_lab": "laserfarm",
-            "shared_with_scopes": [],
-            "shared_with_users": [],
-            "versions": [
-              {
-                "version": 2,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/71d8dd78-6be0-4aaf-911e-673d0e6cb882/"
-              },
-              {
-                "version": 3,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/025fee36-dd95-406a-b112-1fa50fd55049/"
-              },
-              {
-                "version": 4,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/30dd38bc-22a9-433d-aa53-88f248fe8a2c/"
-              },
-              {
-                "version": 5,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/22dea4f1-ee82-4818-9d85-3b01e5c9ab35/"
-              },
-              {
-                "version": 6,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/733a140f-dde6-432a-91c3-483d72d1e0b1/"
-              },
-              {
-                "version": 7,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/b448f62b-0b28-4e95-beea-a11be3952579/"
-              },
-              {
-                "version": 8,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/6d0151fd-0e4e-42e5-af83-098fdbadc22c/"
-              },
-              {
-                "version": 9,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/604b33ea-9a3e-4f55-9fd9-0e808c8d58bf/"
-              },
-              {
-                "version": 10,
-                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/0d983922-7f64-478b-a7dd-f50dbf969f8f/"
-              }
-            ],
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.3.13",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.3.13"
-            },
-            "dependencies": [
-              {
-                "name": "Path",
-                "module": "pathlib",
-                "asname": null
-              },
-              {
-                "name": "DataProcessing",
-                "module": "laserfarm",
-                "asname": null
-              }
-            ],
-            "inputs": [
-              {
-                "name": "shuffled_tiles",
-                "type": "list"
-              }
-            ],
-            "outputs": [
-              {
-                "name": "feature_extraction_completed",
-                "type": "list"
-              }
-            ],
-            "confs": [
-              {
-                "name": "conf_targets",
-                "assignation": "conf_targets = 'targets/'"
-              },
-              {
-                "name": "conf_retiled",
-                "assignation": "conf_retiled = 'retiled/'"
-              }
-            ],
-            "params": [
-              {
-                "name": "param_apply_filter_value",
-                "type": "str",
-                "default_value": "1"
-              },
-              {
-                "name": "param_attribute",
-                "type": "str",
-                "default_value": "raw_classification"
-              },
-              {
-                "name": "param_feature_names",
-                "type": "list",
-                "default_value": "[\"point_density\", \"sigma_z\", \"perc_25_normalized_height\", \"perc_50_normalized_height\", \"perc_75_normalized_height\", \"perc_95_normalized_height\", \"max_normalized_height\", \"median_normalized_height\", \"mean_normalized_height\", \"var_normalized_height\", \"std_normalized_height\", \"skew_normalized_height\", \"kurto_normalized_height\", \"coeff_var_normalized_height\", \"entropy_normalized_height\", \"density_absolute_mean_normalized_height\", \"band_ratio_normalized_height_1\", \"band_ratio_1_normalized_height_2\", \"band_ratio_2_normalized_height_3\", \"band_ratio_3_normalized_height\", \"eigenv_1\", \"eigenv_2\", \"eigenv_3\", \"normal_vector_1\", \"normal_vector_2\", \"normal_vector_3\"]"
-              },
-              {
-                "name": "param_filter_type",
-                "type": "str",
-                "default_value": "select_equal"
-              },
-              {
-                "name": "param_intermediate_folder",
-                "type": "str",
-                "default_value": "/home/jovyan/Cloud Storage/naa-vre-laserfarm/"
-              },
-              {
-                "name": "param_max_x",
-                "type": "str",
-                "default_value": "398892.19"
-              },
-              {
-                "name": "param_max_y",
-                "type": "str",
-                "default_value": "726783.87"
-              },
-              {
-                "name": "param_min_x",
-                "type": "str",
-                "default_value": "-113107.81"
-              },
-              {
-                "name": "param_min_y",
-                "type": "str",
-                "default_value": "214783.87"
-              },
-              {
-                "name": "param_n_tiles_side",
-                "type": "str",
-                "default_value": "512"
-              },
-              {
-                "name": "param_run_name",
-                "type": "str",
-                "default_value": "f'{param_input_data_folder}_{param_ahn_version}'"
-              },
-              {
-                "name": "param_tile_mesh_size",
-                "type": "str",
-                "default_value": "10."
-              },
-              {
-                "name": "param_validate_precision",
-                "type": "str",
-                "default_value": "0.001"
-              }
-            ],
-            "secrets": [],
-            "title": "s5-extract-features-koen-greuell-lifewatch-eu",
-            "description": "s5-extract-features-koen-greuell-lifewatch-eu",
-            "created": "2026-08-03T08:47:42.757799Z",
-            "modified": "2026-08-03T08:47:43.307119Z",
-            "version": 10,
-            "template_format": "v1",
-            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s5-extract-features-koen-greuell-lifewatch-eu:0f71021",
-            "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/299daa4fbf8a121a44047e8e6bd44be99624e760/s5-extract-features-koen-greuell-lifewatch-eu",
-            "is_draft": false
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 61
-        }
-      },
       "e24ff2d5-9f57-46cd-8319-716117fcabd7": {
         "id": "e24ff2d5-9f57-46cd-8319-716117fcabd7",
         "position": {
@@ -1440,11 +1078,385 @@
           "height": 61
         }
       },
-      "d3a6d1f8-4f98-4766-ba87-59707b105c12": {
-        "id": "d3a6d1f8-4f98-4766-ba87-59707b105c12",
+      "7ed10eae-b3fd-4897-aaa0-9c8bcf67094e": {
+        "id": "7ed10eae-b3fd-4897-aaa0-9c8bcf67094e",
         "position": {
-          "x": 170.7692043184588,
-          "y": 72.95774647887322
+          "x": 719.9747157071027,
+          "y": 754.4312026002164
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "shuffled_tiles": {
+            "id": "shuffled_tiles",
+            "type": "left",
+            "properties": {
+              "color": "#bb79d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          },
+          "feature_extraction_completed": {
+            "id": "feature_extraction_completed",
+            "type": "right",
+            "properties": {
+              "color": "#ac538b",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/83198f26-88d8-451e-998f-ed4c9630a1fc/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "laserfarm",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "versions": [
+              {
+                "version": 2,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/71d8dd78-6be0-4aaf-911e-673d0e6cb882/"
+              },
+              {
+                "version": 3,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/025fee36-dd95-406a-b112-1fa50fd55049/"
+              },
+              {
+                "version": 4,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/30dd38bc-22a9-433d-aa53-88f248fe8a2c/"
+              },
+              {
+                "version": 5,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/22dea4f1-ee82-4818-9d85-3b01e5c9ab35/"
+              },
+              {
+                "version": 6,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/733a140f-dde6-432a-91c3-483d72d1e0b1/"
+              },
+              {
+                "version": 7,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/b448f62b-0b28-4e95-beea-a11be3952579/"
+              },
+              {
+                "version": 8,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/6d0151fd-0e4e-42e5-af83-098fdbadc22c/"
+              },
+              {
+                "version": 9,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/604b33ea-9a3e-4f55-9fd9-0e808c8d58bf/"
+              },
+              {
+                "version": 10,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/0d983922-7f64-478b-a7dd-f50dbf969f8f/"
+              },
+              {
+                "version": 11,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/83198f26-88d8-451e-998f-ed4c9630a1fc/"
+              }
+            ],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.3.16",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.3.16"
+            },
+            "dependencies": [
+              {
+                "name": "Path",
+                "module": "pathlib",
+                "asname": null
+              },
+              {
+                "name": "DataProcessing",
+                "module": "laserfarm",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "shuffled_tiles",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "feature_extraction_completed",
+                "type": "list"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_retiled",
+                "assignation": "conf_retiled = 'retiled/'"
+              },
+              {
+                "name": "conf_targets",
+                "assignation": "conf_targets = 'targets/'"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_apply_filter_value",
+                "type": "str",
+                "default_value": "1"
+              },
+              {
+                "name": "param_attribute",
+                "type": "str",
+                "default_value": "raw_classification"
+              },
+              {
+                "name": "param_feature_names",
+                "type": "list",
+                "default_value": "[\"point_density\", \"sigma_z\", \"perc_25_normalized_height\", \"perc_50_normalized_height\", \"perc_75_normalized_height\", \"perc_95_normalized_height\", \"max_normalized_height\", \"median_normalized_height\", \"mean_normalized_height\", \"var_normalized_height\", \"std_normalized_height\", \"skew_normalized_height\", \"kurto_normalized_height\", \"coeff_var_normalized_height\", \"entropy_normalized_height\", \"density_absolute_mean_normalized_height\", \"band_ratio_normalized_height_1\", \"band_ratio_1_normalized_height_2\", \"band_ratio_2_normalized_height_3\", \"band_ratio_3_normalized_height\", \"eigenv_1\", \"eigenv_2\", \"eigenv_3\", \"normal_vector_1\", \"normal_vector_2\", \"normal_vector_3\"]"
+              },
+              {
+                "name": "param_filter_type",
+                "type": "str",
+                "default_value": "select_equal"
+              },
+              {
+                "name": "param_intermediate_folder",
+                "type": "str",
+                "default_value": "/home/jovyan/Cloud Storage/naa-vre-laserfarm/"
+              },
+              {
+                "name": "param_max_x",
+                "type": "str",
+                "default_value": "398892.19"
+              },
+              {
+                "name": "param_max_y",
+                "type": "str",
+                "default_value": "726783.87"
+              },
+              {
+                "name": "param_min_x",
+                "type": "str",
+                "default_value": "-113107.81"
+              },
+              {
+                "name": "param_min_y",
+                "type": "str",
+                "default_value": "214783.87"
+              },
+              {
+                "name": "param_n_tiles_side",
+                "type": "str",
+                "default_value": "512"
+              },
+              {
+                "name": "param_run_name",
+                "type": "str",
+                "default_value": "f'{param_input_data_folder}_{param_ahn_version}'"
+              },
+              {
+                "name": "param_tile_mesh_size",
+                "type": "str",
+                "default_value": "10."
+              },
+              {
+                "name": "param_validate_precision",
+                "type": "str",
+                "default_value": "0.001"
+              }
+            ],
+            "secrets": [],
+            "title": "s5-extract-features-koen-greuell-lifewatch-eu",
+            "description": "s5-extract-features-koen-greuell-lifewatch-eu",
+            "created": "2026-08-31T07:29:00.376941Z",
+            "modified": "2026-08-31T07:29:01.515324Z",
+            "version": 11,
+            "template_format": "v1",
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s5-extract-features-koen-greuell-lifewatch-eu:6a675c5",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/1ca9113d03270eb949129193d7222152b227f63f/s5-extract-features-koen-greuell-lifewatch-eu",
+            "is_draft": false
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "242569d9-c090-4bac-8381-da8af76881d5": {
+        "id": "242569d9-c090-4bac-8381-da8af76881d5",
+        "position": {
+          "x": 1258.1473456121341,
+          "y": 793.434452871072
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "feature_extraction_completed": {
+            "id": "feature_extraction_completed",
+            "type": "left",
+            "properties": {
+              "color": "#ac538b",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 17
+            }
+          },
+          "features": {
+            "id": "features",
+            "type": "left",
+            "properties": {
+              "color": "#ac5369",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 43
+            }
+          },
+          "geotiff_features": {
+            "id": "geotiff_features",
+            "type": "right",
+            "properties": {
+              "color": "#53a5ac",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/2b7bf769-e70f-44a3-ae48-0aa8c39bed46/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "laserfarm",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "versions": [
+              {
+                "version": 4,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/b940df61-f317-48ff-82df-2a4167212c1d/"
+              },
+              {
+                "version": 5,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/024447c1-38c8-4eae-a6d2-b851e042bb7e/"
+              },
+              {
+                "version": 6,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/84f27db0-64c9-4b99-85e5-58e8291e7c9e/"
+              },
+              {
+                "version": 7,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/90b0335c-b149-4fe8-bb76-6dd8e165c6f5/"
+              },
+              {
+                "version": 8,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/13441e46-8e4c-4618-88fd-6efba88ad08d/"
+              },
+              {
+                "version": 9,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/262439da-f756-4c7b-8285-206e00907b27/"
+              },
+              {
+                "version": 10,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/758f27b4-7357-4ba6-ac40-e98f05deb473/"
+              },
+              {
+                "version": 11,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/2b7bf769-e70f-44a3-ae48-0aa8c39bed46/"
+              }
+            ],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-build:v0.3.16",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-laserfarm-cell-runtime:v0.3.16"
+            },
+            "dependencies": [
+              {
+                "name": "Path",
+                "module": "pathlib",
+                "asname": null
+              },
+              {
+                "name": "GeotiffWriter",
+                "module": "laserfarm",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "feature_extraction_completed",
+                "type": "list"
+              },
+              {
+                "name": "features",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "geotiff_features",
+                "type": "list"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_geotiff",
+                "assignation": "conf_geotiff = 'geotiff/'"
+              },
+              {
+                "name": "conf_targets",
+                "assignation": "conf_targets = 'targets/'"
+              },
+              {
+                "name": "conf_temporary_folder",
+                "assignation": "conf_temporary_folder = '/tmp'"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_intermediate_folder",
+                "type": "str",
+                "default_value": "/home/jovyan/Cloud Storage/naa-vre-laserfarm/"
+              },
+              {
+                "name": "param_output_storage",
+                "type": "str",
+                "default_value": "/home/jovyan/Cloud Storage/naa-vre-laserfarm/"
+              },
+              {
+                "name": "param_run_name",
+                "type": "str",
+                "default_value": "f'{param_input_data_folder}_{param_ahn_version}'"
+              }
+            ],
+            "secrets": [],
+            "title": "s6-save-geotiff-koen-greuell-lifewatch-eu",
+            "description": "s6-save-geotiff-koen-greuell-lifewatch-eu",
+            "created": "2026-08-31T09:08:37.530439Z",
+            "modified": "2026-08-31T09:08:38.249140Z",
+            "version": 11,
+            "template_format": "v1",
+            "container_image": "ghcr.io/naavre/cells-vl-laserfarm/s6-save-geotiff-koen-greuell-lifewatch-eu:341b066",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-laserfarm/tree/80bc562967f3e8879dc7d4c9ccaa852c0cbebeda/s6-save-geotiff-koen-greuell-lifewatch-eu",
+            "is_draft": false
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "0c1ee061-ae1c-4832-b125-ae05bead6049": {
+        "id": "0c1ee061-ae1c-4832-b125-ae05bead6049",
+        "position": {
+          "x": 161.7226435536294,
+          "y": 87.04225352112677
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -1652,17 +1664,6 @@
           "portId": "retiling_completed"
         }
       },
-      "edb76c37-2dd3-491a-9a1a-0110c0db25b2": {
-        "id": "edb76c37-2dd3-491a-9a1a-0110c0db25b2",
-        "from": {
-          "nodeId": "f181375b-6aef-4b20-8fe1-2a977d8674aa",
-          "portId": "splitter_target"
-        },
-        "to": {
-          "nodeId": "de5bdf7a-ca8b-4f06-a4e2-746c9b33cc34",
-          "portId": "shuffled_tiles"
-        }
-      },
       "ac06a663-2c9f-448e-805c-d93b0e9315e5": {
         "id": "ac06a663-2c9f-448e-805c-d93b0e9315e5",
         "from": {
@@ -1674,21 +1675,21 @@
           "portId": "splitter_source"
         }
       },
-      "ce9a616e-b545-4649-bb40-07edd09e8743": {
-        "id": "ce9a616e-b545-4649-bb40-07edd09e8743",
+      "e05788f6-e198-4860-a091-96a7bddef71d": {
+        "id": "e05788f6-e198-4860-a091-96a7bddef71d",
         "from": {
-          "nodeId": "de5bdf7a-ca8b-4f06-a4e2-746c9b33cc34",
-          "portId": "feature_extraction_completed"
+          "nodeId": "f181375b-6aef-4b20-8fe1-2a977d8674aa",
+          "portId": "splitter_target"
         },
         "to": {
-          "nodeId": "b6de6d8b-6ea4-45a4-974b-4a21c1f57356",
-          "portId": "feature_extraction_completed"
+          "nodeId": "7ed10eae-b3fd-4897-aaa0-9c8bcf67094e",
+          "portId": "shuffled_tiles"
         }
       },
-      "08baaf37-43a1-47b7-92a8-502ece578740": {
-        "id": "08baaf37-43a1-47b7-92a8-502ece578740",
+      "65bb72a1-80af-48bb-b793-4b5a85ea914b": {
+        "id": "65bb72a1-80af-48bb-b793-4b5a85ea914b",
         "from": {
-          "nodeId": "b6de6d8b-6ea4-45a4-974b-4a21c1f57356",
+          "nodeId": "242569d9-c090-4bac-8381-da8af76881d5",
           "portId": "geotiff_features"
         },
         "to": {
@@ -1696,21 +1697,32 @@
           "portId": "geotiff_features"
         }
       },
-      "5a9676bf-0fb1-4141-b309-fcddfee0f45b": {
-        "id": "5a9676bf-0fb1-4141-b309-fcddfee0f45b",
+      "e581619a-cac1-4c56-a856-a2b6aadea8a7": {
+        "id": "e581619a-cac1-4c56-a856-a2b6aadea8a7",
+        "from": {
+          "nodeId": "7ed10eae-b3fd-4897-aaa0-9c8bcf67094e",
+          "portId": "feature_extraction_completed"
+        },
+        "to": {
+          "nodeId": "242569d9-c090-4bac-8381-da8af76881d5",
+          "portId": "feature_extraction_completed"
+        }
+      },
+      "31ec719c-8cd7-4d8e-816f-840d986ada3c": {
+        "id": "31ec719c-8cd7-4d8e-816f-840d986ada3c",
         "from": {
           "nodeId": "ca658ae6-86e1-4ab6-a415-4f733bdfc824",
           "portId": "features"
         },
         "to": {
-          "nodeId": "b6de6d8b-6ea4-45a4-974b-4a21c1f57356",
+          "nodeId": "242569d9-c090-4bac-8381-da8af76881d5",
           "portId": "features"
         }
       },
-      "ab53c74c-7eb1-41fe-b748-09351ae206a7": {
-        "id": "ab53c74c-7eb1-41fe-b748-09351ae206a7",
+      "d40b7389-6b94-4079-8614-2b2e6968c13f": {
+        "id": "d40b7389-6b94-4079-8614-2b2e6968c13f",
         "from": {
-          "nodeId": "d3a6d1f8-4f98-4766-ba87-59707b105c12",
+          "nodeId": "0c1ee061-ae1c-4832-b125-ae05bead6049",
           "portId": "retrieval_url_range"
         },
         "to": {
@@ -1720,10 +1732,7 @@
       }
     },
     "selected": {},
-    "hovered": {
-      "type": "node",
-      "id": "d3a6d1f8-4f98-4766-ba87-59707b105c12"
-    },
+    "hovered": {},
     "metadata": {
       "version": "1.1"
     },
